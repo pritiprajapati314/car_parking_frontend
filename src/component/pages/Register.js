@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginPage from '../Login/loginPage'
+import LoginPage from '../Register/register'
 
 function userPage() {
     return (
