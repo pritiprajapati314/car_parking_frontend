@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:Poppins;
+}
+
+
+.hero{
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    display:flex;
+    width:100%;
+    background-size:cover;
+    justify-content: center;
+    align-items: center;
+    background-image: url(register.jpg);
+    object-fit: cover;
+}
+
+.container{
+    margin: 0 auto;
+    height: 100%;
+    width:50%;
+    left: 0%;
+    
+    
+    padding:25px 30px;
+    box-shadow:0 0 50px 30px rgba(68, 152, 230, 0.787);
+    background-image: linear-gradient(rgba(99, 160, 184, 0.479),rgba(92, 102, 243, 0.397));
+    
+    background:transparent;
+    backdrop-filter: blur(15px);
+    box-sizing: border-box;
+    padding-top: 0px;
+}
+.container .title{
+    padding-top: 3%;
+    font-size:25px;
+    font-weight: 500;
+    position:relative;
+    text-align: center;
+    color:#fff;
+}
+
+.container .title::before{
+    content:'';
+    position:absolute;
+    /* left:0; */
+    bottom:0;
+    height:3px;
+    width:30px;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6);
+    text-align:center ;
+}
+.container form .userdetails{
+    height: fit-content;
+    width: fit-content;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    margin: 20px 0 12px 0;
+    box-sizing: border-box;
+    min-height: 300px;
+    /* color:#71b7e6; */
+
+}
+.container form .userdetails  .inputbox{
+    text-align: left;
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+    border: none;
+    /* color:aqua; */
+}
+.container .userdetails .inputbox .details{
+    font-size: large;
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color:#fff;
+}
+
+.container .userdetails .inputbox input{
+    height:45px;
+    width:100%;
+    outline:none;
+    border-radius: 15px;
+    border:1px solid rgb(19, 117, 182);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(rgba(148, 216, 248, 0.452),rgba(0, 0, 100, 0.548));;
+}
+.container .userdetails .inputbox input:focus,
+.container .userdetails .inputbox input:valid{
+    border-color:orange;
+    /* color:aqua; */
+}
+
+.container .genderdetails{
+    padding: 10px;
+}
+
+.container .genderdetails span{
+    display: inline-block;
+    width: 10em;
+}
+.container form .genderdetails .gendertitle{
+    font-size:20px;
+    font-weight: 500;
+}
+
+.container form .button{
+    height:45px;
+    margin:45px 0;
+}
+.container form .button input{
+    height:100%;
+    width:100%;
+    outline:none;
+    color:#fff;
+    border:none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    background:linear-gradient(135deg,#3494d4ef,#ba5ddf);
+}
+.container form .button input:hover{
+    background:linear-gradient(-135deg,#204964,#671c85);
+    cursor: pointer;
+}
+@media(max-width: 930px){
+    .container .title{
+        padding-top: 3%;
+        font-size:25px;
+        font-weight: 500;
+        position:relative;
+        text-align: center;
+        color:#fff;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+        background-size:cover;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+.container .genderdetails{
+    background-color: #fff;
+    border: 1px solid rgb(19, 117, 182);
+    
+    border-style:solid;
+    border-radius: 10px;
+    /* letter-spacing: 1px; */
+    justify-content:space-between;
+}
+.container .genderdetails div{
+    padding: 2px;
+}
+
+.container .submitbtn{
+    width:32%;
+    margin: 20px;
+    padding:10px 30px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+    background:linear-gradient(135deg,#347ad4ef,#ba5ddf);
+    border:0;
+    outline:none;
+    border-radius: 30px;
+    color:#fff;
+    text-align: center;
+}
+
+.container .submitbtn:hover{
+    background:linear-gradient(-135deg,#204964,#671c85);
+    cursor: pointer;
+}
+h4{
+    padding-top: 5px;
+    text-align: center;
+}
+.container .icon{
+    font-family: fontawesome;
+}
