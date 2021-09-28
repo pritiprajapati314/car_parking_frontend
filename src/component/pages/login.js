@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginPage from '../Login/loginPage'
 
-function userPage() {
+function loginPage() {
     return (
         <div>
             <LoginPage></LoginPage>
@@ -9,4 +9,4 @@ function userPage() {
     )
 }
 
-export default userPage;
+export default loginPage;

@@ -4,7 +4,6 @@ import { Button } from './Button';
 import './Navbar.css'
 
 
-
 function Navbar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -19,6 +18,7 @@ function Navbar() {
             setButton(true);
         }
     };
+
 
     useEffect(() => {
         showButton();
@@ -37,12 +37,12 @@ function Navbar() {
                     </div>
                     <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
                         <li className = 'nav-item'>
-                            <Link to='/services' className = 'nav-links' onClick = {closeMobileMenu}>
+                            <Link to='/' className = 'nav-links' onClick = {closeMobileMenu}>
                                 Home
                             </Link>
                         </li>
                         <li className = 'nav-item'>
-                            <Link to='/' className = 'nav-links' onClick = {closeMobileMenu}>
+                            <Link to='/services' className = 'nav-links' onClick = {closeMobileMenu}>
                                 services
                             </Link>
                         </li>
