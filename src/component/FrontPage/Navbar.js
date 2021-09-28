@@ -5,7 +5,6 @@ import { Button } from './Button';
 import './Navbar.css'
 
 
-
 function Navbar() {
    
     const [click, setClick] = useState(false);
@@ -21,6 +20,7 @@ function Navbar() {
             setButton(true);
         }
     };
+
 
     useEffect(() => {
         showButton();

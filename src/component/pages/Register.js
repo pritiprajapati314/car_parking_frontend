@@ -1,12 +1,15 @@
 import React from 'react'
+
 import Navbar from '../FrontPage/Navbar';
-import LoginPage from '../Register/register'
+import Register from '../Register/register'
+
 
 function userPage() {
     return (
         <div>
             <Navbar/>
-            <LoginPage></LoginPage>
+            
+            <Register></Register>
         </div>
     )
 }

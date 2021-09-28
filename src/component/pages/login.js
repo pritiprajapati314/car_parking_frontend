@@ -2,7 +2,8 @@ import React from 'react'
 import Navbar from '../FrontPage/Navbar';
 import LoginPage from '../Login/loginPage'
 
-function login() {
+
+function loginPage() {
     return (
         <div>
             <Navbar/>
@@ -11,4 +12,5 @@ function login() {
     )
 }
 
-export default login;
+
+export default loginPage;
