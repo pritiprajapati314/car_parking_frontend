@@ -21,7 +21,8 @@ export default class register extends Component {
             gender: '',
             password: '',
             cPassword: '',
-            vehicle: ''
+            vehicle: '',
+            userId: ''
         }
     }
 
@@ -53,6 +54,7 @@ export default class register extends Component {
             dateOfBirth : this.state.dateOfBirth,
             gender: this.state.gender,
             email: this.state.email,
+            userId: this.state.userId
         }
         console.log(result);
         let res = await axios.post('http://localhost:3000/user/register', result).then(res => console.log(res.data))
@@ -175,6 +177,28 @@ export default class register extends Component {
                                 type="text" 
                                 className={style.icon}
                                 name="pin"  
+                                value = {this.state.pin}
+                                onChange = {this.handleChange}
+                                placeholder="&#xf084; Confirm your password" 
+                                required />                 
+                            </div>
+                            <div className={style.inputbox}>
+                                <span className={style.details}>userID</span>
+                                <input 
+                                type="text" 
+                                className={style.icon}
+                                name="userId"  
+                                value = {this.state.userId}
+                                onChange = {this.handleChange}
+                                placeholder="&#xf084; Confirm your password" 
+                                required />                 
+                            </div>
+                            <div className={style.inputbox}>
+                                <span className={style.details}>pin</span>
+                                <input 
+                                type="text" 
+                                className={style.icon}
+                                name="district"  
                                 value = {this.state.pin}
                                 onChange = {this.handleChange}
                                 placeholder="&#xf084; Confirm your password" 
