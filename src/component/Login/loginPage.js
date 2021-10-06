@@ -2,8 +2,8 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import style from './loginPage.module.css'
-import { FETCH_USER_LOGIN } from '../../redux/action'
-import {connect} from 'react-redux';
+// import { FETCH_USER_LOGIN } from '../../redux/action'
+// import {connect} from 'react-redux';
 //import addToken from '../../state';
 
 let token = '';
@@ -28,7 +28,8 @@ const LoginPage = (props) => {
 
         const record = ({...userLogin});
         await axios.post('http://localhost:3000/user/login', record).then(res => token = res)
-        props.USER_LOGIN()
+        // props.USER_LOGIN()
+        console.log(token);
     }
     
 
@@ -77,15 +78,7 @@ const LoginPage = (props) => {
     )
 }
 
-const mapStateToProps = state => {
-    return {
-        token : state.token
-    }
-}
 
-const mapDispatchToProps = dispatch => {
-    return{
-        USER_LOGIN: () => dispatch(FETCH_USER_LOGIN(token))
-    } 
-}
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+
+
+export default LoginPage;
