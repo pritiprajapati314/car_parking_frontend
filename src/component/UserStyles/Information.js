@@ -1,11 +1,17 @@
 
+import useGeolcation from '../useGeolcation';
 import './Information.css';
+
 const Information = () => {
+    const location = useGeolcation();
     return (
 
     
 
 <section className="information">
+<div className="location">
+        {location.loaded?JSON.stringify(location):"not found"}
+        </div>
     <div className="child-info">
     <h2 id="info-heading">Why book with us?</h2>
     <p id="information1">The online parking slot booking system offers a plethora 
@@ -20,6 +26,7 @@ const Information = () => {
 
        </p>
     </h6>
+   
     <h6 id="info-heading2">
         <b>Secure Payments</b>
         <p id="information1">

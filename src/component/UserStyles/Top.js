@@ -1,10 +1,11 @@
 import React from 'react'
 import './top.css';
+
 const Top = () => {
     return (
         
             <div>
-<div className = "background-image">
+<div className = "backgroundImage">
 <section class="heading2">    
 <div className="topic">
 <p className="info"> Online Parking Slot Booking</p>
@@ -13,12 +14,18 @@ const Top = () => {
 </div>   
 </section>
 <section class="middle">
-<div class="input-group">
-<div class="form-inline">
-<input type="search" placeholder = "city" id="form1" class="form-control" />
-<input type="search" placeholder = "location" id="form1" class="form-control" />
-<input type="search" placeholder = "time" id="form1" class="form-control" />
-</div>
+
+{/* <div class="form-inline">
+ 
+    
+    <select name="countrya" id="stateSel" size="1">
+        <option value="" selected="selected">Please select Country first</option>
+    </select>
+    
+   <select name="district" id="districtSel" size="1">
+        <option value="" selected="selected">Please select State first</option>
+    </select>
+   
 <button type="button" class="btn btn-primary">
 <i class="fas fa-search"> Search</i>
 </button>
@@ -28,8 +35,10 @@ const Top = () => {
 </button>
 </div>
 </section>
-</div>
+</div> */}
 
+</section>
+</div>
         </div>
     )
 }
