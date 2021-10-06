@@ -1,18 +1,15 @@
 import React from 'react'
-import NavBar from "./UserStyles/NavBar";
+/* import NavBar from "./UserStyles/NavBar";
 import Information from "./UserStyles/Information";
-import Footer from "./UserStyles/Footer";
+import Footer from "./UserStyles/Footer"; */
+import Maps from "../Map/Maps"
 function UserPage(){
     return(
     <>
-   <NavBar/>
-   <Information/>
-   <Footer/>
-
-   
+    <Maps/> 
    </>
     );
 
 }
-export default UserPage;
+//export default UserPage;
 

@@ -3,7 +3,7 @@ import './NavBar.css';
 const NavBar = () => {
     return (
        
-            <div className="Nav">
+        <div className="Nav">
       <section className="header">
    <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <a className="navbar-brand" href="#">BookMySlot</a>

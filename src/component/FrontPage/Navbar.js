@@ -19,7 +19,6 @@ function Navbar() {
         }
     };
 
-
     useEffect(() => {
         showButton();
     }, []);

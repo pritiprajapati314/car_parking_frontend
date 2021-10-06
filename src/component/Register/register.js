@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import style from './style2.module.css'
 import axios from 'axios'
+import dateFormat from 'dateformat';
 /* import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css" */
 
@@ -42,7 +43,7 @@ export default class register extends Component {
     handleSubmit = async (e)=>{
         e.preventDefault();
 
-        const result = {
+        const record = {
             firstName : this.state.firstName,
             lastName : this.state.lastName,
             contact : this.state.contact,
@@ -51,14 +52,13 @@ export default class register extends Component {
             address : this.state.address,
             vehicle : this.state.vehicle,
             pin : this.state.pin,
-            dateOfBirth : this.state.dateOfBirth,
+            dateOfBirth : dateFormat(this.state.dateOfBirth),
             gender: this.state.gender,
             email: this.state.email,
             userId: this.state.userId
         }
-        console.log(result);
-        let res = await axios.post('http://localhost:3000/user/register', result).then(res => console.log(res.data))
-        console.log(res);
+        console.log("from front-end : ",record);
+        let res = await axios.post('http://localhost:3000/user/register', record).then(res => console.log(res.data))
        
     }
     render() {
@@ -120,6 +120,7 @@ export default class register extends Component {
                                 name="contact"
                                 value = {this.state.contact}
                                 onChange = {this.handleChange}
+                
                                 placeholder="&#xf879; 97XXXXXXX9" 
                                 pattern="[0-9]{10}" 
                                 required />          
@@ -153,11 +154,11 @@ export default class register extends Component {
                                 type="date" 
                                 className={style.icon}
                                 class="dateOfBirth"  
-                                value = {this.state.date}
+                                value = {this.state.dateOfBirth}
+                                name = "dateOfBirth" 
                                 onChange = {this.handleChange}
                                 placeholder="&#xf084; Enter your Password" 
-                                required />
-                                    
+                                required />     
                             </div>
                             <div className={style.inputbox}>
                                 <span className={style.details}>address</span>
