@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import AddParking from './ManagerFile/AddParking'
-import FormSuccess from './ManagerFile/FormSuccess'
-import Image from './images/ParkLot.jpg'
+import AddParking from './AddParking'
+import FormSuccess from './FormSuccess'
+import Image from './Park.jpg'
 import './form.css';
 const ParkingForm = () => {
     const[issubmitting,SetIsSubmitting] = useState(false)

@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from './images/manager.jpg'
+
 const FormSuccess = () => {
     return (
         <div>
