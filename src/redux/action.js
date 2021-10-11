@@ -5,6 +5,6 @@ export const user_login = (response) => {
     return{
         type : FETCH_USER_LOGIN,
         token : response.token,
-        email : response.email
+        user : response.user
     }
 }

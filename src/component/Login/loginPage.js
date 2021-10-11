@@ -23,7 +23,7 @@ const LoginPage = (props) => {
     }
 
     const Dispatch = useDispatch();
-    const newToken = useSelector(state => state.email);
+    const newToken = useSelector(state => state.user);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
