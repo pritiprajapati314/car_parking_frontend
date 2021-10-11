@@ -4,12 +4,7 @@ import { withRouter } from 'react-router';
 import {useSelector, useDispatch} from 'react-redux';
 import axios from 'axios'
 import style from './loginPage.module.css'
-<<<<<<< HEAD
-// import img1 from './img1';
-// import { FETCH_USER_LOGIN } from '../../redux/action'
-=======
 import { user_login } from '../../redux/action'
->>>>>>> bf48ee31cfdefc1f0d42147703c2fccb9218c4c9
 // import {connect} from 'react-redux';
 //import addToken from '../../state';
 
