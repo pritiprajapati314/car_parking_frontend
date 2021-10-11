@@ -3,7 +3,7 @@ import {FETCH_USER_LOGIN} from './actionTypes';
 const initialState = {
     login : false,
     token : '',
-    email : ''
+    user : ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
             ...state,
             login : true,
             token : action.token,
-            email : action.email
+            email : action.user
         }
         default: return state
     }
