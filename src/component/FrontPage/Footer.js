@@ -8,7 +8,7 @@ function Footer() {
         <div className='footer-container'>
             <section className = "footer-comment">
                 <p className="footer-comment-heading">
-                    some discription. thankYou!
+                    some description. thankYou!
                 </p>
                 <p className='footer-comment-text'>
                     You can post your comment
@@ -48,7 +48,7 @@ function Footer() {
                         <Link to='/'>Terms of Service</Link>
                     </div>
                     <div className='footer-link-items'>
-                        <h2> Contect Us </h2>
+                        <h2> Contact Us </h2>
                         <Link to='/sign-up'>How it Works</Link>
                         <Link to='/'>Testimonials</Link>
                         <Link to='/'>Careers</Link>
@@ -66,7 +66,7 @@ function Footer() {
                         <Link to='/'>Terms of Service</Link>
                     </div>
                     <div className='footer-link-items'>
-                        <h2> Contect Us </h2>
+                        <h2> Contact Us </h2>
                         <Link to='/sign-up'>How it Works</Link>
                         <Link to='/'>Testimonials</Link>
                         <Link to='/'>Careers</Link>

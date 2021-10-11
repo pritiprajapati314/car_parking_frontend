@@ -11,5 +11,5 @@ function UserPage(){
     );
 
 }
-//export default UserPage;
+export default UserPage;
 

@@ -1,38 +1,17 @@
 
+import useGeolcation from '../useGeolcation';
 import './Information.css';
+
 const Information = () => {
+    const location = useGeolcation();
     return (
 
-     <div>
-         
-         <section class="heading2">
-         <div className = "background-image">
-    <div className="topic">
-        <p className="info"> Online Parking Slot Booking</p>
-        <p className="info3">   &nbsp; Search and book parking lots near you</p>
-    </div>
-    <section class="middle">
-        {/* <form action="" className="form-horizontal my-2 my-lg-0">
-            <input className="form-control mr-sm-2" type="search" placeholder="City" aria-label="Search"/>
-            <input className="form-control mr-sm-2" type="search" placeholder="Location" aria-label="Search"/>
-            <input className="form-control mr-sm-2" type="search" placeholder="Time" aria-label="Search"/>
-            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form> */}
-            <form class="form-inline" action="">
- 
-  <input type="search"  placeholder="City" name="city"/>
-  
-  <input type="search"  placeholder="Location" name="location"/>
-  <input type="search"  placeholder="Time" name="time"/>
-  
-  <button type="submit">Submit</button>
-</form>
- </section>
-    </div>
-</section>
-
     
+
 <section className="information">
+<div className="location">
+        {location.loaded?JSON.stringify(location):"not found"}
+        </div>
     <div className="child-info">
     <h2 id="info-heading">Why book with us?</h2>
     <p id="information1">The online parking slot booking system offers a plethora 
@@ -47,6 +26,7 @@ const Information = () => {
 
        </p>
     </h6>
+   
     <h6 id="info-heading2">
         <b>Secure Payments</b>
         <p id="information1">
@@ -81,7 +61,7 @@ const Information = () => {
 </div>
 </section>
 
-</div>
+
         
     )
 }

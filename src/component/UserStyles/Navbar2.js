@@ -1,12 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import { Button } from './Button';
 
-
-import './Navbar.css'
-
-
-function Navbar() {
+function Navbar2() {
    
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -22,6 +17,7 @@ function Navbar() {
         }
     };
 
+
     useEffect(() => {
         showButton();
     }, []);
@@ -32,39 +28,39 @@ function Navbar() {
             <nav className="navbar">
                 <div className = "navbar-container">
                     <Link to = "/" className = "navbar-logo" onClick = {closeMobileMenu}>
-                       TITLE <i className = "fas fa-car"></i>
+                       Account<i class="fas fa-user-circle"></i>
                     </Link>
                     <div className = 'menu-icon' onClick = {handleClick}>
                         <i className = {click ?  'fas fa-times' : 'fas fa-bars'} />
                     </div>
                     <ul className = {click ? 'nav-menu active' : 'nav-menu'}>
                         <li className = 'nav-item'>
-                            <Link to='/adminLogin' className = 'nav-links' onClick = {closeMobileMenu}>
-                                Admin
+                            <Link to='/' className = 'nav-links' onClick = {closeMobileMenu}>
+                                Home
                             </Link>
                         </li>
                         <li className = 'nav-item'>
-                            <Link to='/services' className = 'nav-links' onClick = {closeMobileMenu}>
-                                services
+                            <Link to='/bookSlot' className = 'nav-links' onClick = {closeMobileMenu}>
+                                BookSlot
                             </Link>
                         </li>
                         <li className = 'nav-item'>
-                            <Link to='/login' className = 'nav-links' onClick = {closeMobileMenu}>
-                                Login
+                            <Link to='/' className = 'nav-links' onClick = {closeMobileMenu}>
+                                Payments
                             </Link>
                         </li>
                         <li className = 'nav-item'>
-                            <Link to='/sign-up' className = 'nav-links-mobile' onClick = {closeMobileMenu}>
-                                Sign Up
+                            <Link to='/' className = 'nav-links-mobile' onClick = {closeMobileMenu}>
+                                Profile
                             </Link>
                         </li>
                         
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                    
                 </div> 
             </nav>
         </>
     )
 }
 
-export default Navbar
+export default Navbar2
