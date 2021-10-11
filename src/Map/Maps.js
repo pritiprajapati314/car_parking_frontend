@@ -1,6 +1,7 @@
+
 import React from 'react'
 import { GoogleMap,Marker,InfoWindow,useLoadScript, useJsApiLoader } from '@react-google-maps/api';
-import mapstyles from './mapstyles';
+import mapstyles from '../component/mapstyles';
 import './searchstyles.css'
 import usePlacesAutocomplete, {
   getGeocode,

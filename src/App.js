@@ -1,10 +1,9 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 import '././App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Home from './component/pages/home'
-import Login from './component/pages/login'
-import Register from './component/pages/Register'
+import Home from './component/pages/home';
+import Login from './component/pages/login';
+import Register from './component/pages/Register';
 import UserPage from './component/pages/UserPage';
 import AdminLogin from './component/Admin/AdminLogin/AdminLogin';
 import AdminPanel from './component/Admin/AdminPanel/AdminPanel';
@@ -48,5 +47,3 @@ function App() {
 }
 
 export default App;
-
-//main page

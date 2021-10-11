@@ -1,12 +1,14 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
+import { withRouter } from 'react-router';
+import {useSelector, useDispatch} from 'react-redux';
 import axios from 'axios'
 import style from './loginPage.module.css'
-// import { FETCH_USER_LOGIN } from '../../redux/action'
+import { user_login } from '../../redux/action'
 // import {connect} from 'react-redux';
 //import addToken from '../../state';
 
-let token = '';
+let response = '';
 
 const LoginPage = (props) => {
     const [userLogin, setUserLogin] = useState({
@@ -20,16 +22,22 @@ const LoginPage = (props) => {
         setUserLogin({...userLogin, [name] : value})
     }
 
-    
-
+    const Dispatch = useDispatch();
+    const newToken = useSelector(state => state.email);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const record = ({...userLogin});
-        await axios.post('http://localhost:3000/user/login', record).then(res => token = res)
-        // props.USER_LOGIN()
-        console.log(token);
+        await axios.post('http://localhost:3000/user/login', record).then(res => response = res);
+        console.log("from the backend", response);
+        if(response.data.token.length){
+            Dispatch(user_login(response.data));
+            
+            console.log("after the work", newToken);
+            props.history.push("/");
+        }
+        //console.log(token);
     }
     
 
@@ -81,4 +89,4 @@ const LoginPage = (props) => {
 
 
 
-export default LoginPage;
+export default withRouter(LoginPage);
