@@ -1,5 +1,5 @@
 
-import useGeolcation from '../useGeolcation';
+import useGeolcation from '../MapFile/useGeolcation';
 import './Information.css';
 
 const Information = () => {
