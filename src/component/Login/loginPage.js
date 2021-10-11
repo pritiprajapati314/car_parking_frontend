@@ -2,6 +2,7 @@ import React from 'react'
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 import style from './loginPage.module.css'
+// import img1 from './img1';
 // import { FETCH_USER_LOGIN } from '../../redux/action'
 // import {connect} from 'react-redux';
 //import addToken from '../../state';
@@ -64,7 +65,7 @@ const LoginPage = (props) => {
                                 <button 
                                 type="submit" 
                                 className = {style.subbtn} 
-                                >Submit</button>
+                                >Sign In</button>
 
                                 <input type="checkbox"/>
                                 <a href="/#">Forgot Password?</a><br/>

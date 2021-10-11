@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import style2 from './admin_panel_style.module.css';
+import style2 from './ManagerPanel.module.css';
 import Image1 from './images/manager.jpg'
 import Image2 from './images/d1.jpg'
 import Image3 from './images/co.jpg'
@@ -12,22 +12,27 @@ import Image9 from './images/search1.jpg'
 import Image10 from './images/set.jpg'
 import Image11 from './images/user1.jpg'
 import Image12 from './images/ad.jpg'
-const AdminPanel = () => {
+import Image13 from './images/vacant.jpg'
+import Image14 from './images/booked.jpg'
+
+
+const ManagerPanel = () => {
     return (
         <div>
              <div className={style2.sideMenu}>
         <div className={style2.brandName}>
-            <h2 className = {style2.h2}>Welcome<br/>Admin! &nbsp;</h2>
+            <h2 className = {style2.h2}>Welcome<br/>Manager! &nbsp;</h2>
          
         </div>
         <ul>
             <li><img src={Image2}/>&nbsp;Dashboard</li>
-            <li><img src={Image1}/><Link to ="/adminPanel/manager">&nbsp;Manager Registration</Link></li>
+            <li><img src={Image1}/>Lot Layout</li>
             <li><img src={Image1}/>Accounts</li>
-            <li><img src={Image1}/>Managers</li>
+            {/* <li><img src={Image1}/>Managers</li> */}
             <li><img src={Image3}/>Customers</li>
             <li><img src={Image1}/>Recent Payments</li>
-            <li><img src={Image5}/> <Link to ="/adminPanel/addParking">&nbsp;Add Parking Lots </Link></li>
+            {/* <li><img src={Image5}/> <Link to ="/adminPanel/addParking">&nbsp;Add Parking Lots </Link></li> */}
+            <li><img src={Image1}/>Change Password</li>
             <li><img src={Image10}/>Settings</li>
         </ul>
     </div>
@@ -71,7 +76,16 @@ const AdminPanel = () => {
                 <div className={style2.card}>
                     <div className={style2.box}>
                        <h1 className={style2.h1}>20</h1>
-                        <h3 className={style2.h3}>Parking Lots</h3>
+                        <h3 className={style2.h3}>Slots Available</h3>
+                    </div>
+                    <div className={style2.iconCase}>
+                        <img src={Image13} alt=""/>
+                    </div>
+                </div>
+                <div className={style2.card}>
+                    <div className={style2.box}>
+                       <h1 className={style2.h1}>13</h1>
+                        <h3 className={style2.h3}>Booked</h3>
                     </div>
                     <div className={style2.iconCase}>
                         <img src={Image5} alt=""/>
@@ -79,14 +93,13 @@ const AdminPanel = () => {
                 </div>
                 <div className={style2.card}>
                     <div className={style2.box}>
-                       <h1 className={style2.h1}>35</h1>
-                        <h3 className={style2.h3}>Managers</h3>
+                       <h1 className={style2.h1}>18</h1>
+                        <h3 className={style2.h3}>Occupied</h3>
                     </div>
                     <div className={style2.iconCase}>
-                        <img src={Image1} alt=""/>
+                        <img src={Image14} alt=""/>
                     </div>
                 </div>
-                 
                 
             </div>
            
@@ -99,25 +112,25 @@ const AdminPanel = () => {
                     <table>
                         <tr>
                             <th>Name</th>
-                            <th>Area</th>
+                            <th>Slot ID</th>
                             <th>Amount</th>
                             <th>Option</th>
                         </tr>
                         <tr>
                             <td>Jeff Bezos</td>
-                            <td>Area-23</td>
+                            <td>A23</td>
+                            <td>90/-</td>
+                            <td><a href="#" className={style2.btn}>View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Jeff Bezos</td>
+                            <td>A90</td>
                             <td>60/-</td>
                             <td><a href="#" className={style2.btn}>View</a></td>
                         </tr>
                         <tr>
                             <td>Jeff Bezos</td>
-                            <td>Area-23</td>
-                            <td>60/-</td>
-                            <td><a href="#" className={style2.btn}>View</a></td>
-                        </tr>
-                        <tr>
-                            <td>Jeff Bezos</td>
-                            <td>Area-23</td>
+                            <td>A89</td>
                             <td>60/-</td>
                             <td><a href="#" className={style2.btn}>View</a></td>
                         </tr>
@@ -160,4 +173,4 @@ const AdminPanel = () => {
     )
 }
 
-export default AdminPanel
+export default ManagerPanel
