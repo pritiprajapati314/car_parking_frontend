@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar2 from '../UserStyles/Navbar2'
 import './BookSlot.css';
-import Map from '../Map';
+import Map from '../MapFile/Map';
 class BookSlot extends Component {
     // constructor(props) {
     //     super(props)

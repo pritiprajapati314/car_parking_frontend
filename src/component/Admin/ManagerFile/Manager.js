@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import stylem from './manager_register_style.module.css';
-import Image from './images/av_m.jpg';
+import Image from '../images/av_m.jpg';
 import axios from 'axios';
 class Manager extends Component {
     constructor(props) {

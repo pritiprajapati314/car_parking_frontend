@@ -1,17 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 import style2 from './admin_panel_style.module.css';
-import Image1 from './images/manager.jpg'
-import Image2 from './images/d1.jpg'
-import Image3 from './images/co.jpg'
-import Image4 from './images/no.jpg'
-import Image5 from './images/parea.jpg'
-import Image7 from './images/phead2.jpg'
-import Image8 from './images/search.jpg'
-import Image9 from './images/search1.jpg'
-import Image10 from './images/set.jpg'
-import Image11 from './images/user1.jpg'
-import Image12 from './images/ad.jpg'
+import Image1 from '../images/manager.jpg'
+import Image2 from '../images/d1.jpg'
+import Image3 from '../images/co.jpg'
+import Image4 from '../images/no.jpg'
+import Image5 from '../images/parea.jpg'
+import Image7 from '../images/phead2.jpg'
+import Image8 from '../images/search.jpg'
+import Image9 from '../images/search1.jpg'
+import Image10 from '../images/set.jpg'
+import Image11 from '../images/user1.jpg'
+import Image12 from '../images/ad.jpg'
 const AdminPanel = () => {
     return (
         <div>
@@ -24,7 +24,7 @@ const AdminPanel = () => {
             <li><img src={Image2}/>&nbsp;Dashboard</li>
             <li><img src={Image1}/><Link to ="/adminPanel/manager">&nbsp;Manager Registration</Link></li>
             <li><img src={Image1}/>Accounts</li>
-            <li><img src={Image1}/>Managers</li>
+            <li><img src={Image1}/><Link to ="/adminPanel/managerRequestView">&nbsp;View Manager Request </Link></li>
             <li><img src={Image3}/>Customers</li>
             <li><img src={Image1}/>Recent Payments</li>
             <li><img src={Image5}/> <Link to ="/adminPanel/addParking">&nbsp;Add Parking Lots </Link></li>

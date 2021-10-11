@@ -17,7 +17,7 @@
     background-size:cover;
     justify-content: center;
     align-items: center;
-    background-image: url(p5.jpg);
+    background-image: url('./p5.jpg');
     object-fit: cover;
 }
 
