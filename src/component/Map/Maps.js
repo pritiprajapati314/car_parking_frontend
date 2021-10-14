@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoogleMap,Marker,InfoWindow,useLoadScript, useJsApiLoader } from '@react-google-maps/api';
+import {GoogleMap,Marker,InfoWindow,useLoadScript, useJsApiLoader } from '@react-google-maps/api';
 import mapstyles from './mapstyles';
 import './searchstyles.css'
 import usePlacesAutocomplete, {
@@ -33,7 +33,7 @@ const libraries = ["places"];
  function Maps() {
 
 const  {isLoaded,loadError} = useLoadScript({
-  Maps_API:"AIzaSyBdKrl2lCUjgKVAM51-vw_UwmbPfLCGozw",
+  Maps_API:"AIzaSyDRFS73ZZJrc5uzXr1FP3M7W_DCcxI34nA",
   Places_API:"AIzaSyBIaD2brVQ6zA_lKuq5A1-oK6Ciash7AIw",
   libraries,
 

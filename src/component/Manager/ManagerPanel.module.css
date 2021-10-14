@@ -23,7 +23,7 @@ li{
     color:#999;
 }
 .container .content .content2 .recentPayments .btn{
-    background: #04027e;
+    background: #f05462;
     color:white;
     padding:5px 10px;
     text-align:center;
@@ -39,7 +39,7 @@ li{
 
 }
 .user .btn{
-    background: #04027e;
+    background: #f05462;
     color:white;
     padding:5px 10px;
     text-align:center;
@@ -55,7 +55,7 @@ li{
     transform: scale(1.5);
 }
 .container .content .content2 .newCustomers .btn{
-    background: #04027e;
+    background: #f05462;
     color:white;
     padding:5px 10px;
     text-align:center;
@@ -88,7 +88,7 @@ th,td{
 }
 .sideMenu{
     position: fixed;
-    background: #021163d3;
+    background: #f05462;
     width:20vw;
     min-height: 100vh;
     
@@ -116,7 +116,7 @@ th,td{
 }
 .sideMenu li:hover{
     background: white;
-    color:#f05462;
+    color:#021163d3;
     transform: scale(1.5);
 
 }
@@ -234,7 +234,7 @@ bold{
 
 }
 .container .content .cards{
-    padding:10px 100px;
+    padding:10px 10px;
     display:flex;
     flex-direction: row;
     align-items: center;
