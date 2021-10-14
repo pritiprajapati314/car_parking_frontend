@@ -4,7 +4,7 @@
 #hero{
     width:100%;
     height:100vh;
-    background-image: url(c2.jpg);
+    background-image: url(img1.jpg);
     background-size:cover;
     background-position: center;
     position: relative;
@@ -14,19 +14,20 @@
     width:50%;
     height:100%;
     position:absolute;
-    right:0;
+    /* right:0; */
+    left:0;
     top:0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(148, 216, 248, 0.452),rgba(0, 0, 100, 0.548));
-    backdrop-filter: blur(3px);
+    /* background-image: linear-gradient(rgba(148, 216, 248, 0.452),rgba(0, 0, 100, 0.548)); */
+    /* backdrop-filter: blur(3px); */
 }
 .card{
     width:350px;
     height:500px;
-    box-shadow:0 0 50px 30px rgba(23, 2, 61, 0.315);
-    backdrop-filter: blur(3px);
+    /* box-shadow:0 0 50px 30px rgba(23, 2, 61, 0.315); */
+    /* backdrop-filter: blur(3px); */
 
 }
 .innerbox{
@@ -41,17 +42,18 @@
     height:100%;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(148, 216, 248, 0.452),rgba(0, 0, 100, 0.548));
-    backdrop-filter: blur(3px);
+    background-image: linear-gradient(rgba(84, 86, 88, 0.294),rgba(0, 0, 100, 0.548));
+    /* backdrop-filter: blur(3px); */
     padding:55px;
     box-sizing: border-box;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
 }
 .card h2{
     font-weight:bolder;
     font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
+    color:white;
 }
 .inputbox{
     width: 100%;
@@ -68,17 +70,17 @@
 }
 ::placeholder{
     color:#fff;
-    font-size: 12px;
+    font-size: 5px;
 }
 .subbtn{
     width:100%;
     background: transparent;
     border:1px solid #fff;
     margin:35px 0 10px;
-    height:32px;
-    font-size: 12px;
+    height:52px;
+    font-size: 15px;
     border-radius: 20px;
-    padding: 0 10px;
+    padding: 5px 10px;
     box-sizing: border-box;
     outline: none;
     color:#fff;

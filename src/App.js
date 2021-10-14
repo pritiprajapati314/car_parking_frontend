@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './component/pages/home';
 import Login from './component/pages/login';
 import Register from './component/pages/Register';
-import UserPage from './component/pages/UserPage';
+import userPage from './component/pages/userPage';
 import AdminLogin from './component/Admin/AdminLogin/AdminLogin';
 import AdminPanel from './component/Admin/AdminPanel/AdminPanel';
 import BookSlot from './component/BookSlot/BookSlot';
@@ -25,7 +25,7 @@ function App() {
       <Switch>
         <Route path='/' exact component = {Home} />
         <Route path='/login' exact component = {Login} />
-         <Route path='/services' exact component = {UserPage}/> 
+         <Route path='/services' exact component = {userPage}/> 
          <Route path='/sign-up' exact component = {Register} />
          <Route path = '/adminLogin' exact component = {AdminLogin}/>
          <Route path = '/adminPanel' exact component = {AdminPanel}/>

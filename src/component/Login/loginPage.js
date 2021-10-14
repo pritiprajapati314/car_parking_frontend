@@ -67,7 +67,7 @@ const LoginPage = (props) => {
                                 <button 
                                 type="submit" 
                                 className = {style.subbtn} 
-                                >Submit</button>
+                                >Sign In</button>
 
                                 <input type="checkbox"/>
                                 <a href="/#">Forgot Password?</a><br/>
