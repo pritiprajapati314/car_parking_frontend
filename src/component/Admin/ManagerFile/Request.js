@@ -2,6 +2,7 @@ import React from 'react'
 import {Box,Typography,makeStyles} from '@material-ui/core'
 import Image from '../images/requests.jpg'
 import { mergeClasses } from '@material-ui/styles'
+
 const usestyles = makeStyles({
    container:{
      height:280,
@@ -26,15 +27,15 @@ const usestyles = makeStyles({
    }
 
 })
-const Request = () => {
+const Request = ({request}) => {
     const classes = usestyles();
     return (
         <div>
             <Box className={classes.container}>
              <img className={classes.image} src = {Image} />
-             <Typography> Name</Typography>
-             <Typography> City</Typography>
-             <Typography> Area</Typography>
+             <Typography> Name {request.firstName}</Typography>
+             <Typography> City {request.city}</Typography>
+             <Typography> Area {request.area}</Typography>
             </Box>
         </div>
     )
