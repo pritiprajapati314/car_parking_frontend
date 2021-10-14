@@ -1,13 +1,18 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import { Button } from './Button';
-
+import {useSelector} from 'react-redux';
 
 import './Navbar.css'
 
 
 function Navbar() {
-   
+    
+    //just for testing
+    const newToken = useSelector(state => state);
+
+    
+    console.log(newToken);
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 

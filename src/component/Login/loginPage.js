@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import { withRouter } from 'react-router';
-import {useSelector, useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import axios from 'axios'
 import style from './loginPage.module.css'
 import { user_login } from '../../redux/action'
@@ -23,21 +23,16 @@ const LoginPage = (props) => {
     }
 
     const Dispatch = useDispatch();
-    const newToken = useSelector(state => state.user);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const record = ({...userLogin});
         await axios.post('http://localhost:3000/user/login', record).then(res => response = res);
-        console.log("from the backend", response);
         if(response.data.token.length){
             Dispatch(user_login(response.data));
-            
-            console.log("after the work", newToken);
             props.history.push("/");
         }
-        //console.log(token);
     }
     
 

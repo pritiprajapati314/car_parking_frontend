@@ -58,8 +58,8 @@ export default class register extends Component {
             userId: this.state.userId
         }
         console.log("from front-end : ",record);
-        let res = await axios.post('http://localhost:3000/user/register', record).then(res => console.log(res.data))
-       
+        await axios.post('http://localhost:3000/user/register', record).then(res => (res.data))
+        
     }
     render() {
         return (
