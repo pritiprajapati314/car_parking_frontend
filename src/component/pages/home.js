@@ -7,9 +7,7 @@ import Navbar from '../FrontPage/Navbar';
 function Home (){
     return (
         <>
-          <Navbar/>
-           <FrontSection/>
-           <Footer/> 
+            <h1>Home Page</h1>
         </>
     )
 }

@@ -1,87 +1,140 @@
 import React from 'react'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import { withRouter } from 'react-router';
-import {useDispatch} from 'react-redux';
-import axios from 'axios'
+import { connect} from 'react-redux';
 import style from './loginPage.module.css'
-import { user_login } from '../../redux/action'
 // import {connect} from 'react-redux';
 //import addToken from '../../state';
+import Grid from '@mui/material/Grid';
+import dateFormat from 'dateformat';
+import Container from '@mui/material/Container';
+import CssBaseline from '@mui/material/CssBaseline';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import {loginUser} from '../../redux/auth/AuthActions';
+
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+
 
 let response = '';
 
-const LoginPage = (props) => {
+const theme = createTheme();
+
+const LoginPage = ({auth, loginUser}) => {
     const [userLogin, setUserLogin] = useState({
         email: "",
         password: ""
     });
 
-    const handleInput = (e) => {
+    const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
         setUserLogin({...userLogin, [name] : value})
     }
 
-    const Dispatch = useDispatch();
+    //const Dispatch = useDispatch();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const record = ({...userLogin});
-        await axios.post('http://localhost:3000/user/login', record).then(res => response = res);
-        if(response.data.token.length){
-            Dispatch(user_login(response.data));
-            props.history.push("/");
-        }
+        // const record = ({...userLogin});
+        // await axios.post('http://localhost:3000/user/login', record).then(res => response = res);
+        // if(response.data.token.length){
+        //     Dispatch(user_login(response.data));
+        //     //props.history.push("/");
+        // }
+        loginUser(userLogin);
+        //if()
     }
     
 
     return (
 
         <div id = {style.hero}>
-            <div className= {style.container} >
-                <div className = {style.card}>
-                    <div className = {style.innerbox}>
-                        <div className = {style.cardfront}>
-                            <h2>Login</h2>
-                            <form onSubmit = {handleSubmit}>
-                                <input
-                                type="email" 
-                                className={style.inputbox} 
-                                placeholder="&#xf199; Email Id" 
-                                name="email"
-                                id = "email"
-                                value = {userLogin.email}
-                                onChange = {handleInput}
-                                equired />
-                                <input 
-                                type="password" 
-                                className= {style.inputbox} 
-                                placeholder="&#xf09c; Password"
-                                name = "password"
-                                id = "password"
-                                value = {userLogin.password}
-                                onChange = {handleInput} 
-                                required />
-                            
-                                <button 
-                                type="submit" 
-                                className = {style.subbtn} 
-                                >Sign In</button>
+            <div className={style.container}>
+            <ThemeProvider  theme={theme}>
+                <CssBaseline />
+                <Container  component="main" maxWidth="sm" sx={{ mb: 4 }} >
+                    <Paper variant="outlined" sx={{ my: { xs: 3, md: 4 }, p: { xs: 2, md: 3 } }}>
+                        <Typography component="h1" variant="h4" align="center">
+                            Login
+                        </Typography>
 
-                                <input type="checkbox"/>
-                                <a href="/#">Forgot Password?</a><br/>
-                            </form>
-                        </div>
-                    </div>
+                        <React.Fragment>
+                            <Grid container spacing={3}>
+                                <Grid item xs={12} >
+                                    <TextField 
+                                        required
+                                        id="email"
+                                        name="email"
+                                        label="Email"
+                                        value={userLogin.email}
+                                        onChange={handleChange}
+                                        variant="standard"
+                                        fullWidth
+                                    />
+                                </Grid> 
+                                <Grid item xs={12} >
+                                    <TextField 
+                                        required
+                                        id="password"
+                                        name="password"
+                                        label="Password"
+                                        value={userLogin.password}
+                                        onChange={handleChange}
+                                        type="password"
+                                        variant="standard"
+                                        fullWidth
+                                    />
+                                </Grid>
 
-                </div>
+
+                                <Grid item xs={12}>
+                                    <Link href="/login" variant="body2">
+                                        Forgot Password
+                                    </Link>
+                                    <Button
+                                        variant="contained"
+                                        onClick={handleSubmit}
+                                        fullWidth
+                                        sx={{ mt: 3, mb: 2 }}
+                                    >
+                                        LOGIN
+                                    </Button>
+                                </Grid>
+                            </Grid>
+
+
+                        
+                            <Link href="/login" variant="body2">
+                                Already have an account? Sign In Here
+                            </Link>
+
+                        </React.Fragment>
+                        
+                    </Paper>
+                </Container>
+            </ThemeProvider>
             </div>
         </div>
     )
 }
 
 
+const mapStateToProps = state => {
+    return {
+        auth: state.auth
+    }
+}
 
-
-export default withRouter(LoginPage);
+const mapDispatchToProps = dispatch => {
+    return {
+        loginUser: (userCreds) => dispatch(loginUser(userCreds))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(LoginPage));
