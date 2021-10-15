@@ -1,5 +1,6 @@
 import React from 'react'
 import {Button} from './Button'
+import {Button2} from './Button2'
 import '../../App.css'
 import './FrontSection.css'
 // import { useHistory } from 'react-router'
@@ -11,14 +12,14 @@ function FrontSection(props) {
             <h1>Park Your Car</h1>
             <p>we have a spot for you</p>
             <div className="front-btns">
-                <Button 
+                <Button2 
                     className = 'btns' 
                     buttonStyle ='btn--outline'
                     buttonSize = 'btn--large'
                     // onclick ={history.push("/managerRequest")}
                 >
                     GET STARTED as Manager
-                </Button>
+                </Button2>
                 <Button 
                     className = 'btns' 
                     buttonStyle ='btn--primary'

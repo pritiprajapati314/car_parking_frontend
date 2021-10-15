@@ -12,7 +12,6 @@ function Navbar() {
     const newToken = useSelector(state => state);
 
     
-    console.log(newToken);
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
 

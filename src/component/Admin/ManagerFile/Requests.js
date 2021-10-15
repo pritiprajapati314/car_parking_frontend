@@ -1,4 +1,3 @@
-
 import { useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import Request from './Request' 
@@ -28,40 +27,38 @@ import axios from 'axios'
 // }
 
 // export default Requests
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
- class Requests extends Component {
+export default class Requests extends Component {
      constructor(props) {
          super(props)
      
          this.state = {
-              requests:[]
+            response : '', 
+            requests:[]
          }
      }
-     componentDidMount(){
-         axios.get('http://localhost:3000/managerRequest/requests').then(response=>{
-             console.log(response)
-             this.setState({requests:response.data})
-         }).catch(error=>{
-             console.log(error)
-         })
-     }
+
+    async componentDidMount(){
+        
+        await axios.get('http://localhost:3000/managerRequest/requests').then(res => this.response = res.data)
+        console.log("i am getting the result", this.response);
+    }
+
+     
      
     render() {
         const {requests} = this.state
-
+        
         return (
             
-            
-               
-                [requests].map(request =>
-             <Grid item lg={3} sm={4} xs={12}>
+            [requests].map(request =>
+            <Grid item lg={3} sm={4} xs={12}>
                  {/* <Link style = {{textDecoration:'none'}}to = {'/detailedView'}> */}
              <Request request={request}/>
-             {/* </Link> */}
-         </Grid> )
+            {/* </Link> */}</Grid>)
 
         )
     }
 }
-export default Requests;
+
