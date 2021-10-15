@@ -81,59 +81,130 @@ import axios from 'axios'
 // }
 
 
-class BookSlot extends React.Component {
-    constructor() {
-      super()
-      this.state = {
-        latitude: '',
-        longitude: '',
-      }
+// class BookSlot extends React.Component {
+//     constructor() {
+//       super()
+//       this.state = {
+//         latitude: '',
+//         longitude: '',
+//       }
   
-      this.getMyLocation = this.getMyLocation.bind(this)
-    }
+//       this.getMyLocation = this.getMyLocation.bind(this)
+//     }
     
-    componentDidMount() {
-      this.getMyLocation()
-    }
+//     componentDidMount() {
+//       this.getMyLocation()
+//     }
   
-    getMyLocation() {
-      const location = window.navigator && window.navigator.geolocation
+//     getMyLocation() {
+//       const location = window.navigator && window.navigator.geolocation
       
-      if (location) {
-        location.getCurrentPosition((position) => {
-          this.setState({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          })
-        }, (error) => {
-          this.setState({ latitude: 'err-latitude', longitude: 'err-longitude' })
-        })
-      }
+//       if (location) {
+//         location.getCurrentPosition((position) => {
+//           this.setState({
+//             latitude: position.coords.latitude,
+//             longitude: position.coords.longitude,
+//           })
+//         }, (error) => {
+//           this.setState({ latitude: 'err-latitude', longitude: 'err-longitude' })
+//         })
+//       }
   
-    }
+//     }
 
-    handleSubmit = async (e)=>{
-        e.preventDefault();
+//     handleSubmit = async (e)=>{
+//         e.preventDefault();
 
-        const record = {
-            latitude: 21.8131243, 
-            longitude: 80.1837949,
-        }
-        await axios.post('http://localhost:3000/user/bookSlot', record).then()
+//         const record = {
+//             latitude: 21.8131243, 
+//             longitude: 80.1837949,
+//         }
+//         await axios.post('http://localhost:3000/user/bookSlot', record).then()
         
-    }
+//     }
   
-    render() {
-      const { latitude, longitude } = this.state
+//     render() {
+//       const { latitude, longitude } = this.state
       
-      return (
-        <div>
-          <input type="text" value={latitude} />
-          <input type="text" value={longitude} />
-          <button onClick={this.handleSubmit}>submit</button>
-        </div>
-      )
+//       return (
+//         <div>
+//           <input type="text" value={latitude} />
+//           <input type="text" value={longitude} />
+//           <button onClick={this.handleSubmit}>submit</button>
+//         </div>
+//       )
+//     }
+//   }
+
+
+// const BookSlot = () => {
+//   const [details,setDetails] = useState(null)
+//   const getUserGeolocationDetails =async()=>{
+//     await axios.get("https://geolocation-db.com/json/8dd79c70-0801-11ec-a29f-e381a788c2c0").
+//      then(response=>console.log(response.data)).
+//      then(data=>setDetails(data))
+
+//   }
+//   return (
+//     <div>
+//       <button className="btn btn-primary" onclick={getUserGeolocationDetails}>Get location</button>
+      
+//     </div>
+//   )
+// }
+
+
+
+var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0,
+};
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log("Your current position is:");
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function errors(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+ class BookSlot extends Component {
+  componentDidMount() {
+    if (navigator.geolocation) {
+      navigator.permissions
+        .query({ name: "geolocation" })
+        .then(function (result) {
+          if (result.state === "granted") {
+            console.log(result.state);
+            //If granted then you can directly call your function here
+            navigator.geolocation.getCurrentPosition(success);
+          } else if (result.state === "prompt") {
+            navigator.geolocation.getCurrentPosition(success, errors, options);
+          } else if (result.state === "denied") {
+            //If denied then you have to show instructions to enable location
+          }
+          result.onchange = function () {
+            console.log(result.state);
+          };
+        });
+    } else {
+      alert("Sorry Not available!");
     }
   }
 
-export default BookSlot
+  render() {
+    return (
+      <div>
+        <h2>GeoLocation</h2>
+      </div>
+    );
+  }
+}
+export default BookSlot;
+//8dd79c70-0801-11ec-a29f-e381a788c2c0
+
