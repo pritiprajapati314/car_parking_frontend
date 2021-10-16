@@ -27,15 +27,15 @@ const usestyles = makeStyles({
    }
 
 })
-const Request = ({request}) => {
+const Request = ({req}) => {
     const classes = usestyles();
     return (
         <div>
             <Box className={classes.container}>
              <img className={classes.image} src = {Image} />
-             <Typography> Name {request.firstName}</Typography>
-             <Typography> City {request.city}</Typography>
-             <Typography> Area {request.area}</Typography>
+             <Typography> Name </Typography>
+             <Typography> City</Typography>
+             <Typography> Area </Typography>
             </Box>
         </div>
     )
