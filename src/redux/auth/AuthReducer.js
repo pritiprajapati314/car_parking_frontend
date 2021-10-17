@@ -16,6 +16,8 @@ const authReducer = (state = initialState, action) => {
                 fetchingToken: true
             }
         case LOGIN_SUCCESS:
+            localStorage.setItem('isUserLoggedIn', 'true');
+            localStorage.setItem('token', action.payload);
             return {
                 ...state,
                 fetchingToken: false,

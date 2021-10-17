@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../FrontPage/Navbar';
-import LoginPage from '../Login/loginPage'
+import Navbar from '../component/FrontPage/Navbar';
+import LoginPage from '../component/Login/loginPage'
 
 
 function loginPage() {
