@@ -6,7 +6,7 @@ export const loginUser = (userCred) => {
     return (dispatch) => {
         dispatch(loginRequest())
         axios
-            .post('http://localhost:8080/user/login', userCred)
+            .post('http://localhost:8081/user/login', userCred)
             .then(response => {
                 const token =response.data.token
                 dispatch(loginSuccess(token));

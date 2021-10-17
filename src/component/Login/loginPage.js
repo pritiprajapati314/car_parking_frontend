@@ -1,27 +1,29 @@
 import React from 'react'
 import {useState} from 'react'
+import { Redirect } from "react-router-dom";
 import { withRouter } from 'react-router';
 import { connect} from 'react-redux';
-import style from './loginPage.module.css'
+
 // import {connect} from 'react-redux';
 //import addToken from '../../state';
-import Grid from '@mui/material/Grid';
-import dateFormat from 'dateformat';
+//import dateFormat from 'dateformat';
+//import Box from '@mui/material/Box';
+
+import CircularProgress from '@mui/material/CircularProgress';
+import Link from '@mui/material/Link';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+
 import {loginUser} from '../../redux/auth/AuthActions';
+import style from './loginPage.module.css'
 
-import Link from '@mui/material/Link';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
-
-let response = '';
+//let response = '';
 
 const theme = createTheme();
 
@@ -65,7 +67,10 @@ const LoginPage = ({auth, loginUser}) => {
                             Login
                         </Typography>
 
-                        <React.Fragment>
+
+                        {auth.isUserLoggedIn ?
+                            <Redirect to="/" />
+                        : <React.Fragment>
                             <Grid container spacing={3}>
                                 <Grid item xs={12} >
                                     <TextField 
@@ -105,6 +110,12 @@ const LoginPage = ({auth, loginUser}) => {
                                         sx={{ mt: 3, mb: 2 }}
                                     >
                                         LOGIN
+
+                                        { auth.fetchingToken ?
+                                            <CircularProgress sx={{ color: 'grey.50' }}/>
+                                            :
+                                            <></>
+                                        }
                                     </Button>
                                 </Grid>
                             </Grid>
@@ -116,6 +127,9 @@ const LoginPage = ({auth, loginUser}) => {
                             </Link>
 
                         </React.Fragment>
+                        
+                        }
+
                         
                     </Paper>
                 </Container>

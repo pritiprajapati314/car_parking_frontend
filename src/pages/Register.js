@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Navbar from '../FrontPage/Navbar';
-import Register from '../Register/register'
+import Navbar from '../component/FrontPage/Navbar';
+import Register from '../component/Register/register'
 
 
 function userPage() {
