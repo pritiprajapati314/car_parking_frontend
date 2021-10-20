@@ -31,12 +31,14 @@ const Request = ({req}) => {
     const classes = usestyles();
     return (
         <div>
+            
             <Box className={classes.container}>
              <img className={classes.image} src = {Image} />
              <Typography> Name </Typography>
              <Typography> City</Typography>
-             <Typography> Area </Typography>
+             <Typography> Area</Typography>
             </Box>
+            
         </div>
     )
 }
