@@ -17,6 +17,7 @@ import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
 import DetailedViews from './component/pages/DetailedViews';
 import Searchpage from './component/BookSlot/Searchpage';
+import UserProfile from './component/pages/UserProfile';
 function App() {
   return (
     <>
