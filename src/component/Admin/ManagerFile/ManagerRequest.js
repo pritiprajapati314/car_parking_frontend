@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // import Success from './Success';
 import axios from 'axios';
 import { colors } from '@material-ui/core';
+
 const validEmailRegex = RegExp(
     /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
   );
@@ -11,7 +12,8 @@ const validEmailRegex = RegExp(
     let valid = true;
     Object.values(errors).forEach(val => val.length > 0 && (valid = false));
     return valid;
-  };
+};
+
   
 class ManagerRequest extends Component {
     constructor(props) {
@@ -36,7 +38,7 @@ class ManagerRequest extends Component {
             errors: {
                 firstName: '',
                 lastName :'',
-                 email : '',
+                email : '',
                 dateOfBirth : '',
                 aadhar: '',
                 contact : '',
@@ -49,8 +51,6 @@ class ManagerRequest extends Component {
                 slots:'',
                 fees:'',
                 gender:''
-
-               
               }
         };
     }

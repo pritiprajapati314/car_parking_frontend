@@ -1,7 +1,14 @@
 import React from 'react'
 import {Box,Typography,makeStyles} from '@material-ui/core'
 import Image from '../images/requests.jpg'
-import { mergeClasses } from '@material-ui/styles'
+import Header from './Header'
+// import { styled } from '@material-ui/material/styles';
+// import Card from '@material-ui/material/Card';
+// import CardHeader from '@material-ui/material/CardHeader';
+// import CardMedia from '@material-ui/material/CardMedia';
+// import CardContent from '@material-ui/material/CardContent';
+// import { mergeClasses } from '@material-ui/styles'
+
 const usestyles = makeStyles({
    container:{
      height:280,
@@ -26,16 +33,38 @@ const usestyles = makeStyles({
    }
 
 })
-const Request = () => {
+const Request = ({req}) => {
     const classes = usestyles();
     return (
         <div>
+          {/* <CardHeader
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
+            R
+          </Avatar>
+        }/>
+              <CardMedia
+        component="img"
+        height="194"
+        image="./p5.jpg"
+        alt="Manager"
+      />
+
+           <CardContent>
+        
+        <Typography> Name:{req.firstName} {req.lastName}</Typography>
+             <Typography> City: {req.city}</Typography>
+             <Typography> Area:{req.area}</Typography>
+       
+      </CardContent> */}
+       <Header/>
             <Box className={classes.container}>
              <img className={classes.image} src = {Image} />
-             <Typography> Name</Typography>
-             <Typography> City</Typography>
-             <Typography> Area</Typography>
+             <Typography> Name:{req.firstName} {req.lastName}</Typography>
+             <Typography> City: {req.city}</Typography>
+             <Typography> Area:{req.area}</Typography>
             </Box>
+            
         </div>
     )
 }
