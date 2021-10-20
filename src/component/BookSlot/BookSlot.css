@@ -11,6 +11,7 @@
     border-radius: 10px;
     width:400px;
     height:300px;
+    
 }
 h2{
     text-align: center;
@@ -29,4 +30,35 @@ h2{
     background-size:100%;
    
     background-repeat: no-repeat;
+}
+.BookingSlot input{
+    width:200px;
+    
+    
+}
+.rows{
+    padding:5px;
+    font-size: 20px;
+}
+.BookingSlot .clms{
+    border-radius: 10px;
+}
+.sub-btn{
+    width:200px;
+    color: white;
+   justify-content: center;
+ 
+}
+.BookingSlot .sub-btn{
+    margin:20px auto;
+    padding: 10px;
+    background-color: rgb(35, 98, 170);
+    
+    border:none;
+   
+}
+.BookingSlot .sub-btn:hover{
+    background-color: blueviolet;
+    transform:scale(1.2);
+
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Navbar2 from '../UserStyles/Navbar2'
 import './BookSlot.css';
+import {Paper} from '@material-ui/core';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import axios from 'axios'
 //import Map from '../MapFile/Map';
@@ -283,50 +285,86 @@ else{
         fontSize: '15px',
         fontFamily: "Arial"
       };
+    const paperStyle = { padding: 50, height: '70vh', width: 600, margin: "70px auto" }
     return (
         
         <div>
           <Navbar2/>
+          <Paper elevation={20} style={paperStyle}>
+         
+             
+          
           <div className="MainForm">
+          
+
                    
                 <form className="BookingSlot">
-                    <label>City : &nbsp;</label>
+                  <Row className="rows">
+                    <Col className="clms">
+                 
+                   <label>City : &nbsp;</label></Col>
+                   <Col className="clms">
                     <input name="city" id="city"  value = {this.state.city}
                           onChange = {this.handleChange} type="text" >
                    
                     </input>
-                    <br/>
-                    <label>Area: &nbsp;</label>
+                    </Col>
+                    
+                    </Row>
+                    <Row className="rows">
+                      <Col className="clms">
+                    <label>Area: &nbsp;</label></Col>
+                    <Col className="clms">
                     <input name="area" id = "area" value = {this.state.area}
                           onChange = {this.handleChange} type="text" >
                    
                     </input>
-                    <br/>
+                    </Col>
+                    </Row>
+                   <Row className="rows">
+                     <Col className="clms">
 
-                    <label>Pin: &nbsp;</label>
+                    <label>Pin: &nbsp;</label></Col>
+                    <Col className="clms">
                     <input name="pin" area = "pin" value = {this.state.pin}
                           onChange = {this.handleChange}type="text" >
                    
                     </input>
-                    <br/>
-                    <label>Date : &nbsp;</label>
+                    </Col>
+                  </Row>
+                  <Row className="rows">
+                    <Col className="clms">
+                    <label>Date : &nbsp;</label></Col>
+                    <Col className="clms">
                     <input type="Date" name="date" id="date" value = {this.state.date}
                           onChange = {this.handleChange}>
                     </input>
-                    <br/>
-                    <label>Start Time : &nbsp;</label>
-                    <input type="time" name="startTime" id="startTime"  value = {this.state.startTime}
+
+                    </Col>
+                    </Row>
+                    <Row className="rows">
+                      <Col className="clms">
+                    <label>Start Time : &nbsp;</label></Col>
+                    <Col className="clms"><input type="time" name="startTime" id="startTime"  value = {this.state.startTime}
                           onChange = {this.handleChange} >
-                    </input>
-                    <br/>
-                    <label>End Time: &nbsp;</label>
+                    </input></Col>
+                   </Row>
+                   <Row className="rows">
+                     <Col className="clms">
+                    <label>End Time: &nbsp;</label></Col>
+                    <Col className="clms">
                     <input type="time" name="endTime" id="endTime"  value = {this.state.endTime}
                           onChange = {this.handleChange} >
                     </input>
-                    <br/>
-                    <button type="submit" value="submit" onClick={this.handleSubmit}>Submit</button>                  
+                    </Col>
+                    </Row>
+                    <Row>
+                    <button className="sub-btn" type="submit" value="submit" onClick={this.handleSubmit}>Submit</button>     
+                    </Row>             
                 </form>
                 </div>
+              
+                </Paper>
               
                 </div>  
     
