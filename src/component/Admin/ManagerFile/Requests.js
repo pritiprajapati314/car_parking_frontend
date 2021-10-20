@@ -45,12 +45,12 @@ const Requests = () => {
     useEffect(()=>{
    const fetchdata = async ()=>{
     let mydata = await axios.get('http://localhost:3000/managerRequest/requests')
-    console.log(mydata.data)
-    setRequests(Object.values(mydata.data));    
+    console.log(mydata.data.response)
+    setRequests(mydata.data.response);    
    }
    fetchdata(); },[])
     return (
-        [requests].map(req =>
+        requests.map(req =>
             <Grid item lg={3} sm={4} xs={12}>
              <Request req={req}/>
              
