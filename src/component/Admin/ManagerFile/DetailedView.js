@@ -1,9 +1,11 @@
 
 import React from 'react'
+import { useState,useEffect } from 'react'
 import {Box,makeStyles,Grid, Typography}  from '@material-ui/core'
 import {Edit,Delete,CheckCircle} from '@material-ui/icons'
 // import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import Image from '../images/av_m.jpg' 
+import axios from 'axios'
 const usestyle = makeStyles({
     image:{
      height:350
@@ -24,6 +26,17 @@ const usestyle = makeStyles({
 })
 const DetailedView = () => {
     const classes = usestyle();
+    const [request,setRequest] =  useState({})
+    useEffect(()=>{
+      const fetchdata = async ()=>{
+        let data =  await  axios.get('http://localhost:3000/managerRequest/requests/${id}')
+        console.log(data);
+        setRequest(data);
+      }
+      fetchdata();
+    },[])
+
+
     return (
         <div>
             <Grid container justify = "center">

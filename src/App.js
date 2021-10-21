@@ -17,6 +17,7 @@ import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
 import DetailedViews from './component/pages/DetailedViews';
 import Searchpage from './component/BookSlot/Searchpage'
+import DetailedView from './component/Admin/ManagerFile/DetailedView';
 function App() {
   return (
     <>
@@ -37,7 +38,7 @@ function App() {
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
          <Router path = '/adminPanel/manager' exact component = {Manager} ><Manager/> </Router>
          <Router path = '/adminPanel/managerRequestView' exact component = {ManagerViews} ><ManagerViews/> </Router>
-         <Router path = '/detailedView' exact component = {DetailedViews} ><DetailedViews/> </Router>
+         <Router path = '/detailedView/:id' exact component = {DetailedView} ><DetailedView/> </Router>
          <Router path = '/payments' exact component = {Payment}/>
          <Router path = '/adminPanel/addParking' exact component ={ParkingForm}> <ParkingForm/> </Router>
          <Router path = '/Searchpage' exact component = {Searchpage}>  <Searchpage/> </Router>
