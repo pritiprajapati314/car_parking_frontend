@@ -18,6 +18,8 @@ import ManagerViews from './component/pages/ManagerView';
 import DetailedViews from './component/pages/DetailedViews';
 import Searchpage from './component/BookSlot/Searchpage'
 import DetailedView from './component/Admin/ManagerFile/DetailedView';
+import Searchpage from './component/BookSlot/Searchpage';
+import UserProfile from './component/pages/UserProfile';
 function App() {
   return (
     <>
@@ -34,6 +36,7 @@ function App() {
          <Route path = '/bookSlot' exact component = {BookSlot}/>
          <Route path = '/managerLogin' exact component = {ManagerLogin}/>
          <Route path = '/managerRequest' exact component = {ManagerRequest}/>
+         <Route path='/UserProfile' exact component={UserProfile}/>
          <Route path = '/managerRequest/managerLogin' exact component = {ManagerLogin} > <ManagerLogin/> </Route>
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
          <Router path = '/adminPanel/manager' exact component = {Manager} ><Manager/> </Router>

@@ -1,0 +1,109 @@
+#main{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background-size: cover;
+    height:100%;
+    font-family: 'Roboto',sans-serif;
+    font-size: 10px;
+}
+
+/* .col-md-4 img{
+    border-radius:2px; 
+    height:100%; 
+} */
+.empProfile{
+    padding: 3%;
+    margin:3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.clm1{
+    background-color:#366ee7;
+    margin: 5px;
+     padding: 25px;
+     width:100%;
+     height:100%;
+     border-radius: 2px;
+
+
+}
+
+.profileimg{
+    text-align: center;
+}
+.clm1 img{
+    width: 100%;
+    height: 100%;
+    
+    /* margin-left:10px;
+    padding:10px; */
+}
+.clm1 .file{
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 100px;
+    border: none;
+    border-radius: 0;
+    font-size: 10px;
+    background: #212529b8;
+}
+.profileimg .file input {
+    position: absolute;
+    opacity: 0;
+    /* text-align: center; */
+    right: 0;
+    top: 0;
+}
+.profilehead h5{
+    color: #333;
+    font-size: 40px;
+}
+.profilehead h6{
+    color: #0062cc;
+    font-size: 30px;
+}
+.profileeditbtn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 90%;
+    padding: 2%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #131414;
+    cursor: pointer;
+    margin-top: 20px;
+    
+    /* background-color:rgb(82, 224, 182); */
+}
+.profileeditbtn:hover{
+    background-color:rgb(163, 228, 89);
+    transform: scale(1.2);
+}
+
+
+.profiletab p{
+    font-weight: 600;
+    color: #0062cc;
+    font-size:15px;
+}
+.profiletab label{
+    font-weight: 600;
+    color: black;
+    font-size:15px;
+}
+.profilework{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profilework p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profilework a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
