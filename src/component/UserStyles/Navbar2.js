@@ -60,7 +60,7 @@ function Navbar2() {
                 </div> 
             </nav>
         </>
-    )
+    ) 
 }
 
 export default Navbar2

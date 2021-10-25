@@ -12,11 +12,13 @@ const Requests = () => {
     console.log(mydata.data.response)
     setRequests(mydata.data.response);    
    }
-   fetchdata(); },[])
+   fetchdata();
+ },[])
     return (
+       
         requests.map(req =>
             <Grid item lg={3} sm={4} xs={12}>
-                <Link to={'/detailedView/${req._id}'} style = {{textDecoration:'none',color:'inherit'}} >
+                <Link to={`/detailedView/${req._id}`} style = {{textDecoration:'none',color:'inherit'}} >
              <Request req={req}/>
              </Link>
              

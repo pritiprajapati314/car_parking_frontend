@@ -1,5 +1,5 @@
 import React from 'react';
-import '././App.css';
+
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './component/pages/home';
 import Login from './component/pages/login';
@@ -16,10 +16,11 @@ import ManagerRequest from './component/Admin/ManagerFile/ManagerRequest'
 import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
 import DetailedViews from './component/pages/DetailedViews';
-import Searchpage from './component/BookSlot/Searchpage'
 import DetailedView from './component/Admin/ManagerFile/DetailedView';
 import Searchpage from './component/BookSlot/Searchpage';
 import UserProfile from './component/pages/UserProfile';
+import ApprovedManager from './component/pages/ApprovedManager';
+import ParkingDisplay from './component/pages/ParkingDisplay';
 function App() {
   return (
     <>
@@ -41,10 +42,12 @@ function App() {
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
          <Router path = '/adminPanel/manager' exact component = {Manager} ><Manager/> </Router>
          <Router path = '/adminPanel/managerRequestView' exact component = {ManagerViews} ><ManagerViews/> </Router>
-         <Router path = '/detailedView/:id' exact component = {DetailedView} ><DetailedView/> </Router>
+         <Router path = '/detailedView/:id' exact  ><DetailedView/> </Router>
          <Router path = '/payments' exact component = {Payment}/>
          <Router path = '/adminPanel/addParking' exact component ={ParkingForm}> <ParkingForm/> </Router>
          <Router path = '/Searchpage' exact component = {Searchpage}>  <Searchpage/> </Router>
+         <Router path = '/approvedManager' exact component = {ApprovedManager} > <ApprovedManager/></Router>
+         <Router path = '/parkingDisplay' exact component = {ParkingDisplay} > <ParkingDisplay/></Router>
       </Switch>
     </Router>
       

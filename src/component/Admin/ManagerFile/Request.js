@@ -1,17 +1,17 @@
 import React from 'react'
 import {Box,Typography,makeStyles} from '@material-ui/core'
-import Image from '../images/requests.jpg'
-import Header from './Header'
-// import { styled } from '@material-ui/material/styles';
-// import Card from '@material-ui/material/Card';
-// import CardHeader from '@material-ui/material/CardHeader';
-// import CardMedia from '@material-ui/material/CardMedia';
-// import CardContent from '@material-ui/material/CardContent';
-// import { mergeClasses } from '@material-ui/styles'
-
+import Image from './manImage.png'
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Avatar from '@mui/material/Avatar';
+import { red,grey } from '@mui/material/colors';
+import {  CardActionArea, CardActions } from '@mui/material';
+import { fontSize } from '@mui/system';
 const usestyles = makeStyles({
    container:{
-     height:280,
+     height:340,
      margin:10,
      borderRadius:10,
      display:'flex',
@@ -25,11 +25,13 @@ const usestyles = makeStyles({
    },
    image:{
      height:150,
-     width:'80%'
+     width:'100%'
 
    },
    text:{
-       
+    fontfamily: 'Open Sans',
+   
+    fontweight: 400
    }
 
 })
@@ -37,36 +39,37 @@ const Request = ({req}) => {
     const classes = usestyles();
     return (
         <div>
-          {/* <CardHeader
+           <Card sx={{ maxWidth: 300,bgcolor: grey[100]}} className = {classes.container}>
+           <CardActionArea>
+          <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            M
           </Avatar>
-        }/>
-              <CardMedia
-        component="img"
-        height="194"
-        image="./p5.jpg"
-        alt="Manager"
-      />
-
+        }
+        title = {req.firstName} 
+        />
+         <img className={classes.image} src = {Image} />
            <CardContent>
         
-        <Typography> Name:{req.firstName} {req.lastName}</Typography>
-             <Typography> City: {req.city}</Typography>
-             <Typography> Area:{req.area}</Typography>
+        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Name:{req.firstName} {req.lastName}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: {req.city}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:{req.area}</Typography>
        
-      </CardContent> */}
-       <Header/>
-            <Box className={classes.container}>
+      </CardContent>
+      </CardActionArea>
+      </Card>
+      
+            {/* <Box className={classes.container}>
              <img className={classes.image} src = {Image} />
              <Typography> Name:{req.firstName} {req.lastName}</Typography>
              <Typography> City: {req.city}</Typography>
              <Typography> Area:{req.area}</Typography>
-            </Box>
+            </Box> */}
             
         </div>
     )
 }
 
 export default Request
+//npm install @mui/material @emotion/react @emotion/styled

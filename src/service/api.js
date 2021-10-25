@@ -9,3 +9,13 @@ export const getAllrequests = async()=>{
         console.log("error ",error);
     }
 }
+export const getRequest = async(id) =>{
+    try{
+        let response = await axios.get(`http://localhost:3000/managerRequest/requests/${id}`)
+        return response.data;
+    }
+    catch(error)
+    {
+        console.log(error)
+    }
+}
