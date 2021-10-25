@@ -25,8 +25,8 @@ const AdminPanel = () => {
             <li><img src={Image1}/><Link to ="/adminPanel/manager">&nbsp;Manager Registration</Link></li>
             <li><img src={Image1}/>Accounts</li>
             <li><img src={Image1}/><Link to ="/adminPanel/managerRequestView">&nbsp;View Manager Request </Link></li>
-            <li><img src={Image3}/>Customers</li>
-            <li><img src={Image1}/>Recent Payments</li>
+            <li><img src={Image3}/><Link to ="/approvedManager">&nbsp; Managers</Link></li>
+            <li><img src={Image1}/><Link to ="/parkingDisplay">&nbsp; Parking Lots</Link></li>
             <li><img src={Image5}/> <Link to ="/adminPanel/addParking">&nbsp;Add Parking Lots </Link></li>
             <li><img src={Image10}/>Settings</li>
         </ul>

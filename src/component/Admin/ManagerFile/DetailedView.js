@@ -1,9 +1,12 @@
 
 import React from 'react'
+import { useState,useEffect } from 'react'
 import {Box,makeStyles,Grid, Typography}  from '@material-ui/core'
-import {Edit,Delete,CheckCircle} from '@material-ui/icons'
-// import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import {Delete,CheckCircle} from '@material-ui/icons'
 import Image from '../images/av_m.jpg' 
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
+
 const usestyle = makeStyles({
     image:{
      height:350
@@ -24,6 +27,23 @@ const usestyle = makeStyles({
 })
 const DetailedView = () => {
     const classes = usestyle();
+    const params = useParams();
+    console.log(JSON.stringify(params))
+    const [request,setRequest] =  useState({})
+    useEffect(()=>{
+      const fetchdata = async ()=>{
+        console.log("Fetch data started")
+        // console.log(id)
+
+        let managerrequest =  await axios.get(`http://localhost:3000/managerRequest/requests/${params}`)
+        console.log("This is after managerrequest working")
+        console.log(managerrequest);
+        setRequest(managerrequest.data);
+      }
+      fetchdata();
+    },[])
+
+
     return (
         <div>
             <Grid container justify = "center">
@@ -42,8 +62,8 @@ const DetailedView = () => {
             <Grid container justify = "center">
                
             <Box className = {classes.container}>
-            
-               <Typography> First Name </Typography>
+            {JSON.stringify(params)}
+               <Typography> First Name</Typography>
                <Typography> Last Name </Typography>
                <Typography> Email </Typography>
                <Typography> Date of birth</Typography>

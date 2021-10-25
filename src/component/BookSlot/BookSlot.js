@@ -246,7 +246,7 @@ handleSubmit = async (e)=>{
      
   }
  
-  let res = await axios.post('http://localhost:3000/bookingSearch/search', result).then(res => console.log(res.data),
+  let res = await axios.post('http://localhost:3000/bookingSearch/search-parking', result).then(res => console.log(res.data),
   this.props.history.push('/Searchpage'))
 }
 else{
