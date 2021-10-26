@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+ 
     
 }
 .MainForm{
@@ -11,6 +12,7 @@
     border-radius: 10px;
     width:400px;
     height:300px;
+    
     
 }
 h2{
@@ -25,9 +27,9 @@ h2{
 .main{
     width:100wh;
     height:100vh;
-    margin:100px auto 0 auto;
-    background: url('./BookImage.jpg');
-    background-size:100%;
+    margin:0;
+    background: url('./img.jpg');
+    background-size:cover;
    
     background-repeat: no-repeat;
 }

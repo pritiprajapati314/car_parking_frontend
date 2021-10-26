@@ -288,7 +288,7 @@ else{
     const paperStyle = { padding: 50, height: '70vh', width: 600, margin: "70px auto" }
     return (
         
-        <div>
+        <div className="main">
           <Navbar2/>
           <Paper elevation={20} style={paperStyle}>
          
