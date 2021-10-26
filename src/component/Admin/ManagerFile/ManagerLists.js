@@ -16,6 +16,7 @@ const ManagerLists = () => {
  },[])
     return (
         <div>
+           
            <ManagerList />
             
         </div>

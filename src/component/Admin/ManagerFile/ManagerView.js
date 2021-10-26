@@ -6,9 +6,9 @@ import Navbar from '../../FrontPage/Navbar'
 const ManagerView = () => {
     return (
        <>
-       
+        <Header/>
         <Grid container item lg={12} sm={8} xs={12}>
-          <Header/>
+         
         <Requests/>
             </Grid> 
        
