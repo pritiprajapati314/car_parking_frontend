@@ -15,10 +15,18 @@ const ManagerLists = () => {
    fetchdata();
  },[])
     return (
-        <div>
-           <ManagerList />
-            
-        </div>
+        // managers.map(req=>{
+        //     <Grid item lg={3} sm={4} xs={12}>
+        //      <ManagerList/>
+        //      </Grid>}
+        
+        managers.map(req =>
+            <Grid item lg={3} sm={4} xs={12}>
+             <ManagerList req={req}/>  
+           </Grid>)
+       
+        
+        
     )
 }
 

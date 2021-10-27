@@ -28,17 +28,16 @@ const usestyle = makeStyles({
 const DetailedView = () => {
     const classes = usestyle();
     const params = useParams();
-    console.log(JSON.stringify(params))
     const [request,setRequest] =  useState({})
     useEffect(()=>{
       const fetchdata = async ()=>{
         console.log("Fetch data started")
-        // console.log(id)
+       console.log(Object.values(params))
 
-        let managerrequest =  await axios.get(`http://localhost:3000/managerRequest/requests/${params}`)
+        let managerrequest =  await axios.get(`http://localhost:3000/managerRequest/requests/${Object.values(params)}`)
         console.log("This is after managerrequest working")
-        console.log(managerrequest);
-        setRequest(managerrequest.data);
+        console.log(managerrequest.data.response);
+        setRequest(managerrequest.data.response);
       }
       fetchdata();
     },[])
@@ -62,21 +61,21 @@ const DetailedView = () => {
             <Grid container justify = "center">
                
             <Box className = {classes.container}>
-            {JSON.stringify(params)}
-               <Typography> First Name</Typography>
-               <Typography> Last Name </Typography>
-               <Typography> Email </Typography>
-               <Typography> Date of birth</Typography>
-               <Typography> Aadhar number </Typography>
-               <Typography> Contact </Typography>
-               <Typography> Alternative number </Typography>
-               <Typography> Residence adress </Typography>
-               <Typography> Parking lot address</Typography>
-               <Typography> Pin</Typography>
-               <Typography> City</Typography>
-               <Typography> Area</Typography>
-               <Typography> Slots</Typography>
-               <Typography> Fees </Typography>
+            
+               <Typography> First Name : {request.firstName}</Typography>
+               <Typography> Last Name :  {request.lastName} </Typography>
+               <Typography> Email : {request.email}  </Typography>
+               <Typography> Date of birth :  {request.dateOfBirth} </Typography>
+               <Typography> Aadhar number : {request.aadhar}  </Typography>
+               <Typography> Contact : {request.contact} </Typography>
+               <Typography> Alternative number : {request.alternative}  </Typography>
+               <Typography> Residence address : {request.residence} </Typography>
+               <Typography> Parking lot address : {request.address} </Typography>
+               <Typography> Pin : {request.pin}</Typography>
+               <Typography> City : {request.city}</Typography>
+               <Typography> Area : {request.area}</Typography>
+               <Typography> Slots :{request.slots}</Typography>
+               <Typography> Fees :{request.fees}</Typography>
           </Box>
             </Grid>
           

@@ -16,10 +16,13 @@ const ParkingLots = () => {
    fetchdata();
  },[])
     return (
-        <div>
-          
-           <ParkingLot/>
-        </div>
+        
+           parkings.map(req =>
+            <Grid item lg={3} sm={4} xs={12}>
+             <ParkingLot req={req}/>  
+           </Grid>)
+           
+        
     )
 }
 
