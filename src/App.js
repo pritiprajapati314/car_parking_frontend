@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withRouter } from 'react-router';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './component/pages/home';
 import Login from './component/pages/login';
@@ -37,17 +37,18 @@ function App() {
          <Route path = '/bookSlot' exact component = {BookSlot}/>
          <Route path = '/managerLogin' exact component = {ManagerLogin}/>
          <Route path = '/managerRequest' exact component = {ManagerRequest}/>
+         <Route path = '/detailedView/:id' exact component ={withRouter(DetailedView)}/>
          <Route path='/UserProfile' exact component={UserProfile}/>
          <Route path = '/managerRequest/managerLogin' exact component = {ManagerLogin} > <ManagerLogin/> </Route>
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
-         <Router path = '/adminPanel/manager' exact component = {Manager} ><Manager/> </Router>
-         <Router path = '/adminPanel/managerRequestView' exact component = {ManagerViews} ><ManagerViews/> </Router>
-         <Router path = '/detailedView/:id' exact  ><DetailedView/> </Router>
-         <Router path = '/payments' exact component = {Payment}/>
-         <Router path = '/adminPanel/addParking' exact component ={ParkingForm}> <ParkingForm/> </Router>
-         <Router path = '/Searchpage' exact component = {Searchpage}>  <Searchpage/> </Router>
-         <Router path = '/approvedManager' exact component = {ApprovedManager} > <ApprovedManager/></Router>
-         <Router path = '/parkingDisplay' exact component = {ParkingDisplay} > <ParkingDisplay/></Router>
+         <Route path = '/adminPanel/manager' exact component = {Manager}/>
+         <Route path = '/adminPanel/managerRequestView' exact component = {ManagerViews} />
+         <Route path = '/payments' exact component = {Payment}/>
+         <Route path = '/adminPanel/addParking' exact component ={ParkingForm}/>
+         <Route path = '/Searchpage' exact component = {Searchpage}/>
+         <Route path = '/approvedManager' exact component = {ApprovedManager}/>
+         <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
+        
       </Switch>
     </Router>
       

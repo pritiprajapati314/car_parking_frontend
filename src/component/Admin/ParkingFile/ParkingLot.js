@@ -48,7 +48,7 @@ const usestyles = makeStyles({
       duration: theme.transitions.duration.shortest,
     }),
   }));
-const ParkingLot = () => {
+const ParkingLot = ({req}) => {
     const classes = usestyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -70,9 +70,9 @@ const ParkingLot = () => {
          <img className={classes.image} src = {Image} />
            <CardContent>
         
-        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Manager Name:</Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: </Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:</Typography>
+        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > ParkingLotId:{req.parkingLotId}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: {req.city}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:{req.area}</Typography>
        
       </CardContent>
 

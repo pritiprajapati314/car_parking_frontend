@@ -49,7 +49,7 @@ const usestyles = makeStyles({
       duration: theme.transitions.duration.shortest,
     }),
   }));
-const ManagerList = () => {
+const ManagerList = ({req}) => {
     const classes = usestyles();
     const [expanded, setExpanded] = React.useState(false);
 
@@ -71,9 +71,9 @@ const ManagerList = () => {
          <img className={classes.image} src = {Image} />
            <CardContent>
         
-        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Manager Name:</Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: </Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:</Typography>
+        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Manager Name:{req.firstName}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Email: {req.email} </Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Contact:{req.contact}</Typography>
        
       </CardContent>
 

@@ -3,6 +3,7 @@ import DetailedView from '../Admin/ManagerFile/DetailedView'
 const DetailedViews = () => {
     return (
         <div>
+            
             <DetailedView/>
         </div>
     )
