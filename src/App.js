@@ -21,6 +21,8 @@ import Searchpage from './component/BookSlot/Searchpage';
 import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
+import VisualLayout from './component/VisualDisplay/VisualLayout';
+// import ManagerPanel2 from './ManagerPanel-2/ManagerPanel-2';
 function App() {
   return (
     <>
@@ -38,6 +40,9 @@ function App() {
          <Route path = '/managerLogin' exact component = {ManagerLogin}/>
          <Route path = '/managerRequest' exact component = {ManagerRequest}/>
          <Route path='/UserProfile' exact component={UserProfile}/>
+         <Route path='/VisualLayout' exact component={VisualLayout}/>
+         {/* <Route path='/mypanel' exact component={ManagerPanel2}/> */}
+         
          <Route path = '/managerRequest/managerLogin' exact component = {ManagerLogin} > <ManagerLogin/> </Route>
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
          <Router path = '/adminPanel/manager' exact component = {Manager} ><Manager/> </Router>
@@ -48,6 +53,7 @@ function App() {
          <Router path = '/Searchpage' exact component = {Searchpage}>  <Searchpage/> </Router>
          <Router path = '/approvedManager' exact component = {ApprovedManager} > <ApprovedManager/></Router>
          <Router path = '/parkingDisplay' exact component = {ParkingDisplay} > <ParkingDisplay/></Router>
+
       </Switch>
     </Router>
       
