@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import { red,grey } from '@mui/material/colors';
+import { Link } from 'react-router-dom';
 import {  CardActionArea, CardActions } from '@mui/material';
 const usestyles = makeStyles({
     container:{
@@ -57,9 +58,10 @@ const SlotsDisplay = () => {
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: </Typography>
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:</Typography>
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Price:</Typography>
-         <button styles={{background:'blue',alignItems:'center'}}> Book Now</button>
+         
       </CardContent>
       </CardActionArea>
+      <Link to ={'/VisualLayout'} > <span styles={{color:'red'}}>Book Now </span></Link>
       </Card>
       
         </div>

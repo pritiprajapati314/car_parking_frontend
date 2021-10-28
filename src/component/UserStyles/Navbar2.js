@@ -27,7 +27,7 @@ function Navbar2() {
         <>
             <nav className="navbar">
                 <div className = "navbar-container">
-                    <Link to = "/" className = "navbar-logo" onClick = {closeMobileMenu}>
+                    <Link to = "/UserProfile" className = "navbar-logo" onClick = {closeMobileMenu}>
                        Account<i class="fas fa-user-circle"></i>
                     </Link>
                     <div className = 'menu-icon' onClick = {handleClick}>
