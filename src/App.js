@@ -17,7 +17,7 @@ import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
 import DetailedViews from './component/pages/DetailedViews';
 import DetailedView from './component/Admin/ManagerFile/DetailedView';
-import Searchpage from './component/BookSlot/Searchpage';
+// import Searchpage from './component/BookSlot/Searchpage';
 import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
@@ -50,7 +50,7 @@ function App() {
          <Route path = '/adminPanel/managerRequestView' exact component = {ManagerViews} />
          <Route path = '/payments' exact component = {Payment}/>
          <Route path = '/adminPanel/addParking' exact component ={ParkingForm}/>
-         <Route path = '/Searchpage' exact component = {Searchpage}/>
+         {/* <Route path = '/Searchpage' exact component = {Searchpage}/> */}
          <Route path = '/approvedManager' exact component = {ApprovedManager}/>
          <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
         

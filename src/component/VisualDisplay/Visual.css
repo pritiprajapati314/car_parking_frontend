@@ -294,7 +294,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-.fas{
+.fa-long-arrow-alt-right {
     font-size: 50px;
     position:absolute;
     color: white;
