@@ -22,6 +22,8 @@ import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
 import DenyMessage from './component/Admin/ManagerFile/DenyMessage';
+import VisualLayout from './component/VisualDisplay/VisualLayout';
+// import ManagerPanel2 from './ManagerPanel-2/ManagerPanel-2';
 function App() {
   return (
     <>
@@ -40,6 +42,9 @@ function App() {
          <Route path = '/managerRequest' exact component = {ManagerRequest}/>
          <Route path = '/detailedView/:id' exact component ={withRouter(DetailedView)}/>
          <Route path='/UserProfile' exact component={UserProfile}/>
+         <Route path='/VisualLayout' exact component={VisualLayout}/>
+         {/* <Route path='/mypanel' exact component={ManagerPanel2}/> */}
+         
          <Route path = '/managerRequest/managerLogin' exact component = {ManagerLogin} > <ManagerLogin/> </Route>
          <Route path = '/managerRequest/Success' exact component = {Success} > <Success/> </Route>
          <Route path = '/adminPanel/manager' exact component = {Manager}/>
