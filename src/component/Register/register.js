@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import style from './style2.module.css'
 import axios from 'axios'
 import dateFormat from 'dateformat';
+import { Redirect } from "react-router-dom";
 /* import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css" */
 
@@ -23,8 +24,10 @@ export default class register extends Component {
             password: '',
             cPassword: '',
             vehicle: '',
-            userId: ''
+            userId: '',
+            redirect: null
         }
+
     }
 
     componentDidMount(){
@@ -59,9 +62,15 @@ export default class register extends Component {
         }
         console.log("from front-end : ",record);
         await axios.post('http://localhost:3000/user/register', record).then(res => (res.data))
+        this.setState({
+            redirect: "/login"
+        })
         
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect to={this.state.redirect} />
+        }
         return (
             <div className={style.hero}>
                 <div className={style.container}>
