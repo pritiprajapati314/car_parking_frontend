@@ -15,12 +15,13 @@ import ParkingForm from './component/Parking/ParkingForm';
 import ManagerRequest from './component/Admin/ManagerFile/ManagerRequest'
 import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
-import DetailedViews from './component/pages/DetailedViews';
+//import DetailedViews from './component/pages/DetailedViews';
 import DetailedView from './component/Admin/ManagerFile/DetailedView';
 // import Searchpage from './component/BookSlot/Searchpage';
 import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
+import DenyMessage from './component/Admin/ManagerFile/DenyMessage';
 import VisualLayout from './component/VisualDisplay/VisualLayout';
 // import ManagerPanel2 from './ManagerPanel-2/ManagerPanel-2';
 function App() {
@@ -53,7 +54,7 @@ function App() {
          {/* <Route path = '/Searchpage' exact component = {Searchpage}/> */}
          <Route path = '/approvedManager' exact component = {ApprovedManager}/>
          <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
-        
+         <Route path = '/denyRequest' exact component = {DenyMessage}/>
       </Switch>
     </Router>
       
