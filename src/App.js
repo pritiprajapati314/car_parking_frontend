@@ -21,6 +21,7 @@ import Searchpage from './component/BookSlot/Searchpage';
 import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
+import DenyMessage from './component/Admin/ManagerFile/DenyMessage';
 function App() {
   return (
     <>
@@ -48,7 +49,7 @@ function App() {
          <Route path = '/Searchpage' exact component = {Searchpage}/>
          <Route path = '/approvedManager' exact component = {ApprovedManager}/>
          <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
-        
+         <Route path = '/denyRequest' exact component = {DenyMessage}/>
       </Switch>
     </Router>
       

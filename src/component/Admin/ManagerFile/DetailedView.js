@@ -5,7 +5,7 @@ import {Box,makeStyles,Grid, Typography}  from '@material-ui/core'
 import {Delete,CheckCircle} from '@material-ui/icons'
 import Image from '../images/av_m.jpg' 
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams,useHistory } from 'react-router-dom'
 
 const usestyle = makeStyles({
     image:{
@@ -25,6 +25,13 @@ const usestyle = makeStyles({
     }
 
 })
+
+const deleteRequest = (id)=>{
+ 
+  axios.delete(`http://localhost:3000/managerRequest/requests/${id}`).then(
+    console.log("req deleted succesffully")
+  )
+}
 const DetailedView = () => {
     const classes = usestyle();
     const params = useParams();
@@ -42,7 +49,7 @@ const DetailedView = () => {
       fetchdata();
     },[])
 
-
+    
     return (
         <div>
             <Grid container justify = "center">
@@ -77,9 +84,23 @@ const DetailedView = () => {
                <Typography> Slots :{request.slots}</Typography>
                <Typography> Fees :{request.fees}</Typography>
           </Box>
-            </Grid>
           
-        </div>
+            </Grid>
+            <div className="buttoncontainer" styles={ {
+        display:'flex',
+        justify:'center',
+        alignItems:'center',
+        height:'200px',
+        border:'3px solid green'
+}}>
+            
+            <button> Approve </button>
+             <button id="denyButton" onClick={()=>{
+               deleteRequest(request._id);
+             }}> deny</button>
+             </div>
+           </div> 
+        
     )
 }
 
