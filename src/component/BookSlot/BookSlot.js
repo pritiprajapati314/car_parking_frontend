@@ -246,7 +246,7 @@ handleSubmit = async (e)=>{
      
   }
  
-  let res = await axios.post('http://localhost:3000/bookingSearch/search-parking', result).then(res => console.log(res.data),
+  let res = await axios.post('http://localhost:3000/bookingSearch/search', result).then(res => console.log(res.data.response),
   this.props.history.push('/Searchpage'))
 }
 else{
@@ -288,7 +288,7 @@ else{
     const paperStyle = { padding: 50, height: '70vh', width: 600, margin: "70px auto" }
     return (
         
-        <div className="main">
+        <div>
           <Navbar2/>
           <Paper elevation={20} style={paperStyle}>
          

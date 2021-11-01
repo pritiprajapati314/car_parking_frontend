@@ -5,7 +5,9 @@ import Navbar2 from '../UserStyles/Navbar2'
 import SlotsDisplay from './SlotsDisplay'
 import CheckBox from './CheckBox'
 import { Grid } from '@material-ui/core'
+import SearchResult from './SearchResult'
 const Searchpage = () => {
+ 
     return (
         <div>
             <Navbar2/>
@@ -21,10 +23,7 @@ const Searchpage = () => {
              <div className="cards" style={{height:'400px',marginLeft:'300px'}}>
              <Grid container item lg={12} sm={8} xs={12}>
          
-           <SlotsDisplay/>
-           <SlotsDisplay/>
-           <SlotsDisplay/>
-           <SlotsDisplay/>
+           <SearchResult/>
              </Grid> 
              </div>
             

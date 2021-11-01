@@ -3,6 +3,7 @@ import style from './style2.module.css'
 import axios from 'axios'
 import dateFormat from 'dateformat';
 import { Redirect } from "react-router-dom";
+import { Link } from 'react-router-dom';
 /* import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css" */
 
@@ -227,7 +228,7 @@ export default class register extends Component {
                         </div>
                         <hr />
                         <h4>Already Registered?</h4>
-                        <a href="User_login.html"><div className={style.submitbtn}>Login</div></a>
+                        <Link to ={'/login'}><div className={style.submitbtn}>Login</div></Link>
                     </form>
                 </div>     
             </div>
