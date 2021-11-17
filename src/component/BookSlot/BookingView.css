@@ -1,0 +1,24 @@
+
+ .image{
+      height:350;
+}
+    
+.icon{
+               margin:5;
+           
+           padding:5;
+           width:60;
+           height:60
+        }
+.heading{
+          textAlign:'center';
+          fontSize:'25px';
+          margin-left: 45%;
+        }
+        .container
+        {
+            justify-content: center;
+            margin:auto;
+            margin-left: 40%;
+        }
+    

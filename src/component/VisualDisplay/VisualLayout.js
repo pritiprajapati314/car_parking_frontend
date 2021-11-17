@@ -1,8 +1,20 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import './Visual.css';
+import { ReactDOM } from 'react';
 
 class VisualLayout extends Component {
+ 
+    constructor(props) {
+        super(props);
+       
+    }
+//     changeStyles = () => {
+//         let element = document.getElementById('button') 
+//   element.backgroundColor = 'blue'
+//         console.log("style changed")
+//     }
+     
     render() {
         return (
             <div>
@@ -28,7 +40,7 @@ class VisualLayout extends Component {
         <Row>
     <div className="row1">
         <div className="slotr1" id="s1"></div>
-        <div className="slotr1"></div>
+        <button className="slotr1" id="button" ></button>
         <div className="slotr1"></div>
         <div className="slotr1"></div>
         <div className="slotr1"></div>

@@ -23,6 +23,10 @@ import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';
 import DenyMessage from './component/Admin/ManagerFile/DenyMessage';
 import VisualLayout from './component/VisualDisplay/VisualLayout';
+import Dashboard from './component/ManagerPanel/DashBoard'
+import SearchResult from './component/BookSlot/SearchResult';
+import Searchpage from './component/BookSlot/Searchpage';
+import BookingView from './component/BookSlot/BookingView';
 // import ManagerPanel2 from './ManagerPanel-2/ManagerPanel-2';
 function App() {
   return (
@@ -55,6 +59,10 @@ function App() {
          <Route path = '/approvedManager' exact component = {ApprovedManager}/>
          <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
          <Route path = '/denyRequest' exact component = {DenyMessage}/>
+         <Route path = '/dashboard' exact component = {Dashboard}/>
+         <Route path = '/searchResult' exact component = {SearchResult}/>
+         <Route path = '/Searchpage' exact component = {Searchpage}/>
+         <Route path = '/bookingView' exact component = {BookingView}/>
       </Switch>
     </Router>
       
