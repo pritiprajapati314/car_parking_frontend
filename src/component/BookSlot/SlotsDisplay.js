@@ -36,7 +36,7 @@ const usestyles = makeStyles({
     }
  
  })
-const SlotsDisplay = () => {
+const SlotsDisplay = ({req}) => {
     const classes = usestyles();
     return (
         <div>
@@ -54,10 +54,10 @@ const SlotsDisplay = () => {
          <img className={classes.image} src = {Image} />
            <CardContent>
         
-        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Name: </Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City: </Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:</Typography>
-             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Price:</Typography>
+        <Typography  style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Id:{req.parkingLotId} </Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City:{req.city} </Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:{req.area}</Typography>
+             <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Price:{req.fees}</Typography>
          
       </CardContent>
       </CardActionArea>

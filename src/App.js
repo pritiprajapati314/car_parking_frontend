@@ -7,7 +7,7 @@ import Register from './component/pages/Register';
 import userPage from './component/pages/userPage';
 import AdminLogin from './component/Admin/AdminLogin/AdminLogin';
 import AdminPanel from './component/Admin/AdminPanel/AdminPanel';
-import BookSlot from './component/BookSlot/BookSlot';
+import {BookSlot} from './component/BookSlot/BookSlot';
 import Manager from './component/Admin/ManagerFile/Manager'
 import Payment from './component/Payments/Payment';
 import ManagerLogin from './component/Admin/ManagerFile/Manger_login';
@@ -55,7 +55,7 @@ function App() {
          <Route path = '/adminPanel/managerRequestView' exact component = {ManagerViews} />
          <Route path = '/payments' exact component = {Payment}/>
          <Route path = '/adminPanel/addParking' exact component ={ParkingForm}/>
-         {/* <Route path = '/Searchpage' exact component = {Searchpage}/> */}
+         <Route path = '/Searchpage' exact component = {Searchpage}/>
          <Route path = '/approvedManager' exact component = {ApprovedManager}/>
          <Route path = '/parkingDisplay' exact component = {ParkingDisplay}/>
          <Route path = '/denyRequest' exact component = {DenyMessage}/>
