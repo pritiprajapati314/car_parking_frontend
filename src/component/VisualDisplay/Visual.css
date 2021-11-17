@@ -2,6 +2,11 @@
     box-sizing: border-box;
 } */
 .box{
+    box-sizing: border-box;
+    
+}
+.container{
+    /* perspective: 1000px; */
     border:5px solid black;
     background-color:rgba(71, 69, 69, 0.972);
     color:#fff;
@@ -13,9 +18,7 @@
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin:0;
-}
-.container{
-    perspective: 1000px;
+    position:relative;
     /* margin:100px; */
 
     /* background-color: aqua; */
@@ -97,21 +100,33 @@
     float:left;
    
 }
+.colmspaces{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    position:relative;
+    top:50px;
+    float:left;
+   
+   
+}
 .colm1{
         display:flex;
         flex-direction:column;
-        position: absolute;
+        /* position: absolute;
         top:100px;
-        float:left;
+        float:left; */
+        padding-right: 30px;
         }
 .colm2{
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
     left:100px;
-   
+    */
+    padding-right: 100px;
 }
 .slotcl2{
     background-color:rgb(97, 243, 170);
@@ -125,9 +140,9 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
-    left:145px;
+    left:145px; */
 }
 .slotcl3{
     background-color:rgb(97, 243, 170);
@@ -144,9 +159,10 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
-    left:250px;
+    left:250px; */
+    padding-right: 30px;
 }
 .slotcl4{
     background-color:rgb(97, 243, 170);
@@ -159,9 +175,9 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
-    left:295px;
+    left:295px; */
 }
 .slotcl5{
     background-color:rgb(97, 243, 170);;
@@ -174,9 +190,10 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
-    left:400px;
+    left:400px; */
+    padding-right: 30px;
 }
 .slotcl6{
     background-color:rgb(97, 243, 170);;
@@ -189,9 +206,9 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-    position: absolute;
+    /* position: absolute;
     top:100px;
-    left:445px;
+    left:445px; */
 }
 .slotcl7{
     background-color:rgb(97, 243, 170);;
@@ -222,10 +239,11 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-   position:absolute;
+   /* position:absolute;
      top: 100px; 
-    left:550px; 
+    left:550px;  */
     /* float:left; */
+    padding-right: 30px;
  }
 .slotcl8{
     background-color:rgb(97, 243, 170);
@@ -238,9 +256,9 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-   position:absolute;
+   /* position:absolute;
      top: 100px; 
-    left:595px; 
+    left:595px;  */
     /* float:left; */
  }
 .slotcl9{
@@ -254,9 +272,9 @@
     display:flex;
     flex-direction:column;
     /* align-items: center; */
-   position:absolute;
+   /* position:absolute;
      top: 100px; 
-    left:700px; 
+    left:700px;  */
     /* float:left; */
  }
 .slotcl10{
@@ -267,7 +285,7 @@
     border-radius: 2px;
 }
 @media only screen and (max-width: 340px){
-  .box{
+  .container{
         width:100%;
         height:100vh;
      overflow:hidden; 
@@ -296,16 +314,16 @@
 }
 .fa-long-arrow-alt-right {
     font-size: 50px;
-    position:absolute;
+    position:relative;
     color: white;
     left: 20px;;
-    bottom: 30px;
+    bottom: 80px;
 }
 .fa-long-arrow-alt-up{
     font-size: 50px;
     position:absolute;
     color:white;
-    left:1000px;
+    left:800px;
   top: 20px;
 }
 .two{
@@ -314,4 +332,7 @@
     color:white;
     left:70px;
   top: 20px;
+}
+.fw{
+    border:1px solid black;
 }
