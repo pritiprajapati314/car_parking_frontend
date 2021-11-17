@@ -9,7 +9,8 @@ class VisualLayout extends Component {
                 
     
     <div className="box">
-        <div className="details">
+    <div className="container">
+        {/* <div className="details">
          <div className="t1">
          <h2>Two Wheeler Parking</h2>
          </div>
@@ -17,15 +18,16 @@ class VisualLayout extends Component {
              <h2>Two Wheeler Parking</h2>
          </div>
         
-        </div>
+        </div> */}
         
-        <Container>
-    <div className="container">
-    <div className="f1">
+       
+    {/* <div className="container"> */}
+    {/* <div className="f1">
              <h2>Four Wheeler Parking</h2>
          </div>
-        
-        <Row>
+         */}
+    <div className='spaces'> 
+       
     <div className="row1">
         <div className="slotr1" id="s1"></div>
         <div className="slotr1"></div>
@@ -57,9 +59,8 @@ class VisualLayout extends Component {
         <div className="slotr1"></div> 
         <div className="slotr1"></div> 
     </div>
-    </Row>
-    <Row>
- 
+    
+  <div className="colmspaces">
     <div className="colm1">
        
         <div className="slotcl1"></div>
@@ -264,9 +265,11 @@ class VisualLayout extends Component {
         <div className="slotcl10" id="c12"></div>
         <div className="slotcl10"></div>
         </div>
-        </Row>
+        </div>
+        </div>
+      
  </div>
- </Container>
+
  {/* <!-- <i className="far fa-arrow-alt-circle-down"></i> --> */}
  <i className="fas fa-long-arrow-alt-up">Exit</i>
  {/* <i className="fas fa-long-arrow-alt-up two">Two Wheeler's Space</i> */}

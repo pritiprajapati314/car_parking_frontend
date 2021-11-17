@@ -72,6 +72,18 @@ const LoginPage = ({auth, loginUser}) => {
                                 <input type="checkbox"/>
                                 <a href="/#">Forgot Password?</a><br/>
                             </form>
+                            <h4>Or Login with</h4>
+                            <div class="social">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> 
+        </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> 
+        </a>
+        <a href="#" class="google btn">
+          <i class="fa fa-google fa-fw"></i> 
+        </a>
+      </div>
                         </div>
                     </div>
 

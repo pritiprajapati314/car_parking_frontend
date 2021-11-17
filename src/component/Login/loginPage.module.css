@@ -138,6 +138,10 @@ a:active{
     font-family: fontawesome;
     
 }
+.social{
+    display:flex;
+    
+}
 
 
 @media screen and (max-width: 960px){
