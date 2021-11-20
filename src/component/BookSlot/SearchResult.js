@@ -9,15 +9,15 @@ import {data} from './BookSlot';
 
 const SearchResult = () => {
     //const [requests,setRequests] = useState([]);
- 
-    
+    console.log(data);
+    console.log("data coming here is :", data.pass);
     return (
-             data.pass.map(req =>
+            (data.pass).map(req =>
             <Grid item lg={3} sm={4} xs={12}>
              <SlotsDisplay req={req}/>
            </Grid>)
-      
+          
     )
 }
 
-export default SearchResult
+export default SearchResult;

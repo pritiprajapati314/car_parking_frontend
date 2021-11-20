@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import './Visual.css';
-import {Paper} from '@material-ui/core';
-import red from './red1.jpg';
-import green from './green2.jpg';
-
+import { ReactDOM } from 'react';
 
 class VisualLayout extends Component {
+ 
+    constructor(props) {
+        super(props);
+       
+    }
+//     changeStyles = () => {
+//         let element = document.getElementById('button') 
+//   element.backgroundColor = 'blue'
+//         console.log("style changed")
+//     }
+     
     render() {
         const paperStyle = { padding: 50, height: '80vh', width:350, margin: "70px auto" }
         return (
@@ -35,7 +43,7 @@ class VisualLayout extends Component {
        
     <div className="row1">
         <div className="slotr1" id="s1"></div>
-        <div className="slotr1"></div>
+        <button className="slotr1" id="button" ></button>
         <div className="slotr1"></div>
         <div className="slotr1"></div>
         <div className="slotr1"></div>

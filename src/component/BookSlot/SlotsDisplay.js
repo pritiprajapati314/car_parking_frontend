@@ -9,6 +9,8 @@ import Avatar from '@mui/material/Avatar';
 import { red,grey } from '@mui/material/colors';
 import { Link } from 'react-router-dom';
 import {  CardActionArea, CardActions } from '@mui/material';
+import { Redirect } from 'react-router-dom';
+import { RepeatRounded } from '@material-ui/icons';
 const usestyles = makeStyles({
     container:{
       height:400,
@@ -36,6 +38,14 @@ const usestyles = makeStyles({
     }
  
  })
+// const  handleSubmit=props=>
+//  {
+   
+//   props.history.push("/bookingView")
+    
+   
+   
+//  }
 const SlotsDisplay = ({req}) => {
     const classes = usestyles();
     return (
@@ -58,10 +68,14 @@ const SlotsDisplay = ({req}) => {
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > City:{req.city} </Typography>
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Area:{req.area}</Typography>
              <Typography style={{color:"#424242", fontSize:"18px",fontFamily:"serif"}} variant="body1" > Price:{req.fees}</Typography>
-         
+           
       </CardContent>
+      <button type="button" styles={{color:'blue'}}>
+         Book Now
+     </button>
       </CardActionArea>
-      <Link to ={'/VisualLayout'} > <span styles={{color:'red'}}>Book Now </span></Link>
+
+     
       </Card>
       
         </div>

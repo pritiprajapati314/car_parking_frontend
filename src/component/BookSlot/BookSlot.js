@@ -34,7 +34,7 @@ const validateForm = errors => {
   return valid;
 };
 
-export class BookSlot extends Component {
+export default class BookSlot extends Component {
   constructor(props) {
     super(props);
 
@@ -97,7 +97,7 @@ handleSubmit = async (e)=>{
   }
  
   await axios.post('http://localhost:3000/bookingSearch/search', result)
-  .then(res => data.pass = res.data.ParkingLots);
+  .then(res => data.pass = res.data.response);
   console.log("pass", data.pass);
   this.setState({
     redirect: "/Searchpage"
@@ -229,5 +229,6 @@ else{
     )
 }
  }
+//8dd79c70-0801-11ec-a29f-e381a788c2c0
 //8dd79c70-0801-11ec-a29f-e381a788c2c0
 

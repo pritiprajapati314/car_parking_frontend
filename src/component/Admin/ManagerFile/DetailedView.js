@@ -32,6 +32,11 @@ const deleteRequest = (id)=>{
     console.log("req deleted succesffully")
   )
 }
+const approveRequest = ()=>{
+  axios.post("http://localhost:3000/admin/owner-request")
+  console.log("req added succesfully")
+
+}
 const DetailedView = () => {
     const classes = usestyle();
     const params = useParams();
@@ -94,7 +99,9 @@ const DetailedView = () => {
         border:'3px solid green'
 }}>
             
-            <button> Approve </button>
+            <button id="ApproveButton" onClick = {()=>{
+              approveRequest();
+            }}> Approve </button>
              <button id="denyButton" onClick={()=>{
                deleteRequest(request._id);
              }}> deny</button>
@@ -105,3 +112,4 @@ const DetailedView = () => {
 }
 
 export default DetailedView
+
