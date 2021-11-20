@@ -1,15 +1,20 @@
 import React from 'react'
 import style1 from './Admin_login_style.module.css';
+import Navbar from '../../FrontPage/Navbar';
+import admin from './ad1.jpg'
 
 const AdminLogin = () => {
    
     return (
+        
 
         <div id={style1.hero}>
+            <Navbar/>
             <div className={style1.container}>
                 <div className={style1.card}>
                     <div className={style1.box}>
                         <div className={style1.card1}>
+                        <img src={admin}/>
                             <h2>WELCOME BACK!</h2>
                             <form>
                                 {/* `${styles.normalLink} ${styles.linkButton}` */}

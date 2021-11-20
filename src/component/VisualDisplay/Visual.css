@@ -5,7 +5,7 @@
     box-sizing: border-box;
     
 }
-.container{
+.Container{
     /* perspective: 1000px; */
     border:5px solid black;
     background-color:rgba(71, 69, 69, 0.972);
@@ -14,7 +14,7 @@
     /* flex-direction: column; */
     /* align-items: center; */
     height:100vh;
-    width:100%;
+    width:70%;
     background-size: cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin:0;
@@ -25,14 +25,11 @@
     /* background-color: yellowgreen; */
   
 }
-.container:hover{
-    transition: .5s;
 
-}
 .t1 h2{
     position:absolute;
     top:200px;
-    left:100px;
+    left:50px;
     font-size:x-large;
     float:left;
     writing-mode:vertical-rl;
@@ -50,7 +47,7 @@
 .t2 h2{
     position:absolute;
     top:200px;
-    left:875px;
+    left:680px;
     font-size:x-large;
     letter-spacing: 2px;
     /* float:left; */
@@ -62,9 +59,9 @@
 .f1 h2{
     position:absolute;
     top:50px;
-    left:200px;
-    font-size:xx-large;
-    letter-spacing: 2px;
+    left:0;
+    font-size:x-large;
+    /* letter-spacing: 2px; */
     animation:blink 3s linear infinite;
     color:yellow;
 
@@ -335,4 +332,19 @@
 }
 .fw{
     border:1px solid black;
+}
+.lotTable{
+    position: absolute;
+    top:0;
+    right: 20px;
+}
+.lotTable img{
+    width:30px;
+    height:30px;
+}
+.lotTable h3{
+    font-size:large;
+}
+.lotTable table,th,td{
+    border:2px solid black;
 }
