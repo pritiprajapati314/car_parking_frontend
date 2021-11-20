@@ -16,28 +16,29 @@ class VisualLayout extends Component {
 //     }
      
     render() {
+        const paperStyle = { padding: 50, height: '80vh', width:350, margin: "70px auto" }
         return (
             <div>
                 
     
     <div className="box">
-    <div className="container">
-        {/* <div className="details">
+    <div className="Container">
+        <div className="details">
          <div className="t1">
          <h2>Two Wheeler Parking</h2>
          </div>
          <div className="t2">
-             <h2>Two Wheeler Parking</h2>
-         </div>
-        
-        </div> */}
-        
-       
-    {/* <div className="container"> */}
-    {/* <div className="f1">
              <h2>Four Wheeler Parking</h2>
          </div>
-         */}
+        
+        </div> 
+         
+       
+    {/* <div className="container"> */}
+    <div className="f1">
+             <h2>Two Wheeler Parking</h2>
+         </div>
+     
     <div className='spaces'> 
        
     <div className="row1">
@@ -290,9 +291,33 @@ class VisualLayout extends Component {
  {/* <!-- <i className="fas fa-arrow-right"></i> --> */}
  
 
-</div>
 
-            </div>
+<div className="lotTable">
+<Paper elevation={20} style={paperStyle}>
+    <h2>Vehicles's Count!</h2>
+    <h3><img src={red}/>&nbsp;13 Occupied!</h3>
+    <h3><img src={green}/>&nbsp;189 Available!</h3>
+    <table>
+    <tr>
+            <th>Vehicle</th>
+            <th>Available</th>
+            <th>Occupied</th>
+        </tr>  
+        <tr>
+            <td>Two Wheelers</td>
+            <td>63</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Four Wheelers</td>
+            <td>126</td>
+            <td>10</td>
+        </tr>
+    </table>
+    </Paper></div>
+
+             </div>
+             </div>
         )
     }
 }
