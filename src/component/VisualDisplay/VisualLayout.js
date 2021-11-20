@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import './Visual.css';
 import { ReactDOM } from 'react';
-
+import {Paper} from '@material-ui/core';
+import red from './red1.jpg';
+import green from './green2.jpg';
 class VisualLayout extends Component {
  
     constructor(props) {
@@ -21,7 +23,7 @@ class VisualLayout extends Component {
             <div>
                 
     
-    <div className="box">
+    <div className="box1">
     <div className="Container">
         <div className="details">
          <div className="t1">
