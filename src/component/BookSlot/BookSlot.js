@@ -34,7 +34,7 @@ const validateForm = errors => {
   return valid;
 };
 
-export default class BookSlot extends Component {
+ class BookSlot extends Component {
   constructor(props) {
     super(props);
 
@@ -229,6 +229,7 @@ else{
     )
 }
  }
+ export default BookSlot;
 //8dd79c70-0801-11ec-a29f-e381a788c2c0
 //8dd79c70-0801-11ec-a29f-e381a788c2c0
 

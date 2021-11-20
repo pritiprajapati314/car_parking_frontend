@@ -7,7 +7,7 @@ import Register from './component/pages/Register';
 import userPage from './component/pages/userPage';
 import AdminLogin from './component/Admin/AdminLogin/AdminLogin';
 import AdminPanel from './component/Admin/AdminPanel/AdminPanel';
-import {BookSlot} from './component/BookSlot/BookSlot';
+import BookSlot from './component/BookSlot/BookSlot';
 import Manager from './component/Admin/ManagerFile/Manager'
 import Payment from './component/Payments/Payment';
 import ManagerLogin from './component/Admin/ManagerFile/Manger_login';
@@ -17,7 +17,7 @@ import Success from './component/Admin/ManagerFile/Success';
 import ManagerViews from './component/pages/ManagerView';
 //import DetailedViews from './component/pages/DetailedViews';
 import DetailedView from './component/Admin/ManagerFile/DetailedView';
-import Searchpage from './component/BookSlot/Searchpage';
+
 import UserProfile from './component/pages/UserProfile';
 import ApprovedManager from './component/pages/ApprovedManager';
 import ParkingDisplay from './component/pages/ParkingDisplay';

@@ -30,7 +30,7 @@ export default class AdminLogin extends Component {
                         console.log(user)
                         try {
                           const res = await axios.post("http://localhost:3000/admin/login", user).then(res => console.log(res.data));
-                        
+                          
                         
                          
                         } catch (err) {
